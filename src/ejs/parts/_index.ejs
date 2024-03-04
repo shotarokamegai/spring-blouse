@@ -1,0 +1,14 @@
+<%
+var index_ = ( '00' + index ).slice( -2 );
+%>
+<div class="box scroll-trigger" data-target="style<%- index_ %>">
+    <div class="box-title ff">
+        <p>Style <span class="num"><%- index_ %></span></p>
+    </div>
+    <div class="box-img">
+        <picture>
+            <source srcset="./assets/img/st_<%- index_ %>_item_index.webp" type="image/webp" />
+            <img loading="lazy" src="./assets/img/st_<%- index_ %>_item_index.jpg" width="960" height="1080" alt="" />
+          </picture>
+    </div>
+</div>

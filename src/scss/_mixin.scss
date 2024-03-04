@@ -56,7 +56,7 @@
 
 @mixin fontvwPc($size: 24, $base: 10) {
   font-size: ($size / $base * 0.5) * 1rem;
-  font-size: $size / 1280 * 100vw;
+  font-size: $size / 1440 * 100vw;
 }
 
 @function vw($px, $width: $spWidth) {
@@ -68,7 +68,7 @@
 }
 
 @function vwPc($px) {
-  @return (($px / 1320) * 100vw);
+  @return (($px / 1440) * 100vw);
 }
 
 @function perPc($px) {

@@ -1,7 +1,421 @@
 <main id="home">
+    <div class="vertical">
+        <div></div>
+    </div>
     <section id="top" class="section">
-        <!-- <picture class="zoom"> <source srcset="./assets/img/theme/img.webp" type="image/webp" />
-            <img loading="lazy" src="./assets/img/theme/img.jpg" width="1440" height="1800" alt="" />
-          </picture> -->
+        <div class="title">
+            <div class="bar bar1">
+                <div></div>
+            </div>
+            <h2>
+                <img src="./assets/img/title.svg" width="292" height="180" alt="2024 SPRING BLOUSE Collection" />
+            </h2>
+            <div class="bar bar2">
+                <div></div>
+            </div>
+        </div>
+        <div class="wrapper flex">
+            <div class="box">
+                <h1 class="logo">
+                    <img src="./assets/img/adam-et-rope.svg" width="211" height="21" alt="ADAM ET ROPÉ" />
+                </h1>
+                <div class="box-img active">
+                    <picture>
+                        <source srcset="./assets/img/sky.webp" width="1600" height="1600" type="image/webp" />
+                        <img loading="lazy" src="./assets/img/sky.jpg" width="1600" height="1600" alt="" />
+                    </picture>
+                </div>
+            </div>
+            <div class="box kv">
+                <div class="box-img active">
+                    <picture>
+                        <source srcset="./assets/img/sp_kv_st-1.webp" width="1080" height="1280" media="(max-width:749px)" type="image/webp" />
+                        <source srcset="./assets/img/sp_kv_st-1.jpg" width="1080" height="1280" media="(max-width:749px)" />
+                        <source srcset="./assets/img/pc_kv_st-1.webp" width="1280" height="1080" type="image/webp" />
+                        <img src="./assets/img/pc_kv_st-1.jpg" width="1280" height="1080" alt="" />
+                      </picture>
+                </div>
+                <div class="box-img">
+                    <picture>
+                        <source srcset="./assets/img/sp_kv_st-2.webp" width="1080" height="1280" media="(max-width:749px)" type="image/webp" />
+                        <source srcset="./assets/img/sp_kv_st-2.jpg" width="1080" height="1280" media="(max-width:749px)" />
+                        <source srcset="./assets/img/pc_kv_st-2.webp" width="1280" height="1080" type="image/webp" />
+                        <img src="./assets/img/pc_kv_st-2.jpg" width="1280" height="1080" alt="" />
+                      </picture>
+                </div>
+                <div class="box-img">
+                    <picture>
+                        <source srcset="./assets/img/sp_kv_st-3.webp" width="1080" height="1280" media="(max-width:749px)" type="image/webp" />
+                        <source srcset="./assets/img/sp_kv_st-3.jpg" width="1080" height="1280" media="(max-width:749px)" />
+                        <source srcset="./assets/img/pc_kv_st-3.webp" width="1280" height="1080" type="image/webp" />
+                        <img src="./assets/img/pc_kv_st-3.jpg" width="1280" height="1080" alt="" />
+                      </picture>
+                </div>
+                <div class="box-img">
+                    <picture>
+                        <source srcset="./assets/img/sp_kv_st-4.webp" width="1080" height="1280" media="(max-width:749px)" type="image/webp" />
+                        <source srcset="./assets/img/sp_kv_st-4.jpg" width="1080" height="1280" media="(max-width:749px)" />
+                        <source srcset="./assets/img/pc_kv_st-4.webp" width="1280" height="1080" type="image/webp" />
+                        <img src="./assets/img/pc_kv_st-4.jpg" width="1280" height="1080" alt="" />
+                      </picture>
+                </div>
+                <div class="box-img">
+                    <picture>
+                        <source srcset="./assets/img/sp_kv_st-5.webp" width="1080" height="1280" media="(max-width:749px)" type="image/webp" />
+                        <source srcset="./assets/img/sp_kv_st-5.jpg" width="1080" height="1280" media="(max-width:749px)" />
+                        <source srcset="./assets/img/pc_kv_st-5.webp" width="1280" height="1080" type="image/webp" />
+                        <img src="./assets/img/pc_kv_st-5.jpg" width="1280" height="1080" alt="" />
+                      </picture>
+                </div>
+                <div class="box-img">
+                    <picture>
+                        <source srcset="./assets/img/sp_kv_st-6.webp" width="1080" height="1280" media="(max-width:749px)" type="image/webp" />
+                        <source srcset="./assets/img/sp_kv_st-6.jpg" width="1080" height="1280" media="(max-width:749px)" />
+                        <source srcset="./assets/img/pc_kv_st-6.webp" width="1280" height="1080" type="image/webp" />
+                        <img src="./assets/img/pc_kv_st-6.jpg" width="1280" height="1080" alt="" />
+                      </picture>
+                </div>
+            </div>
+        </div>
     </section>
+    <section id="index" class="section">
+        <div class="section__inner">
+            <p class="section-text show addactive">
+                この原稿はダミーテキストとして使用しております。<br/>
+                ABC・123文字組を美しく見せるにはある程度漢字とひらがなとカタカナがうまく混じったダミー原稿
+            </p>
+            <div class="wrapper flex flex-wrap justify-center">
+                <%
+                for (var i = 1; i < 7; i++) {
+                %>
+                   <%-  include('./../parts/_index', {index: i}) %>
+                <%
+                    }
+                %>
+            </div>
+        </div>
+    </section>
+    <section id="style01" class="section style">
+        <div class="section__inner">
+            <h2 class="section-title absolute">
+                <span>BLOUSE</span>
+                <span>Style</span>
+                <span>01</span>
+            </h2>
+            <div class="style-imgs">
+                <div class="style-img main">
+                    <div class="name">
+                       <%-  include('./../parts/_title01') %>
+                    </div>
+                    <picture>
+                        <source srcset="./assets/img/st_01_main_1.webp" type="image/webp" />
+                        <img src="./assets/img/st_01_main_1.jpg" width="960" height="1440" alt="" />
+                      </picture>
+                </div>
+                <div class="style-img img1">
+                    <picture>
+                        <source srcset="./assets/img/st_01_sub_1.webp" type="image/webp" />
+                        <img src="./assets/img/st_01_sub_1.jpg" width="960" height="1440" alt="" />
+                      </picture>
+                </div>
+                <div class="style-img medium img2">
+                    <picture>
+                        <source srcset="./assets/img/st_01_sub_3.webp" type="image/webp" />
+                        <img src="./assets/img/st_01_sub_3.jpg" width="960" height="1440" alt="" />
+                      </picture>
+                </div>
+                <div class="style-img img3">
+                    <picture>
+                        <source srcset="./assets/img/st_01_sub_2.webp" type="image/webp" />
+                        <img src="./assets/img/st_01_sub_2.jpg" width="960" height="1440" alt="" />
+                      </picture>
+                </div>
+                <div class="credit-wrapper">
+                    <%
+                    for (var i = 1; i < 5; i++) {
+                    %>
+                       <%-  include('./../parts/_credit', {price: '¥00,000', productName: 'Blouse', brandName: '(Miller for ADAM ET ROPÉ)', link: ''}) %>
+                    <%
+                        }
+                    %>
+                </div>
+            </div>
+            <%-  include('./../parts/_product', {index: '01', name: 'BLOUSE', price: '¥00,000', color: ['#000000', '#ffffff', '#d6cf89'], path: 'st_01_item', link: ''}) %>
+        </div>
+    </section>
+    <section id="style02" class="section style">
+        <div class="section__inner">
+            <h2 class="section-title absolute">
+                <span>BLOUSE</span>
+                <span>Style</span>
+                <span>02</span>
+            </h2>
+            <div class="style-imgs">
+                <div class="style-imgs-back absolute"></div>
+                <div class="style-img main">
+                    <div class="name">
+                       <%-  include('./../parts/_title02') %>
+                    </div>
+                    <picture>
+                        <source srcset="./assets/img/st_02_main_1.webp" type="image/webp" />
+                        <img src="./assets/img/st_02_main_1.jpg" width="960" height="1440" alt="" />
+                      </picture>
+                </div>
+                <div class="style-img medium img1">
+                    <picture>
+                        <source srcset="./assets/img/st_02_sub_3.webp" type="image/webp" />
+                        <img src="./assets/img/st_02_sub_3.jpg" width="960" height="1440" alt="" />
+                      </picture>
+                </div>
+                <div class="style-img img2">
+                    <picture>
+                        <source srcset="./assets/img/st_02_sub_1.webp" type="image/webp" />
+                        <img src="./assets/img/st_02_sub_1.jpg" width="960" height="1440" alt="" />
+                      </picture>
+                </div>
+                <div class="style-img img3">
+                    <picture>
+                        <source srcset="./assets/img/st_02_sub_2.webp" type="image/webp" />
+                        <img src="./assets/img/st_02_sub_2.jpg" width="960" height="1440" alt="" />
+                      </picture>
+                </div>
+                <div class="credit-wrapper">
+                    <%
+                    for (var i = 1; i < 5; i++) {
+                    %>
+                       <%-  include('./../parts/_credit', {price: '¥00,000', productName: 'Blouse', brandName: '(Miller for ADAM ET ROPÉ)', link: ''}) %>
+                    <%
+                        }
+                    %>
+                </div>
+            </div>
+            <%-  include('./../parts/_product', {index: '02', name: 'BLOUSE', price: '¥00,000', color: ['#000000', '#ffffff', '#6c6c97,#ffffff'], path: 'st_02_item', link: ''}) %>
+        </div>
+    </section>
+    <section id="style03" class="section style">
+        <div class="section__inner">
+            <h2 class="section-title absolute">
+                <span>BLOUSE</span>
+                <span>Style</span>
+                <span>03</span>
+            </h2>
+            <div class="style-imgs">
+                <div class="style-imgs-back absolute">
+                    <picture>
+                        <source srcset="./assets/img/sky.webp" type="image/webp" />
+                        <img src="./assets/img/sky.jpg" width="720" height="1440" alt="" />
+                      </picture>
+                    </div>
+                <div class="style-img main">
+                    <div class="name">
+                       <%-  include('./../parts/_title03') %>
+                    </div>
+                    <picture>
+                        <source srcset="./assets/img/st_03_main_1.webp" type="image/webp" />
+                        <img src="./assets/img/st_03_main_1.jpg" width="960" height="1440" alt="" />
+                      </picture>
+                </div>
+                <div class="style-img img1">
+                    <picture>
+                        <source srcset="./assets/img/st_03_sub_1.webp" type="image/webp" />
+                        <img src="./assets/img/st_03_sub_1.jpg" width="960" height="1440" alt="" />
+                      </picture>
+                </div>
+                <div class="style-img medium img2">
+                    <picture>
+                        <source srcset="./assets/img/st_03_sub_2.webp" type="image/webp" />
+                        <img src="./assets/img/st_03_sub_2.jpg" width="960" height="1440" alt="" />
+                      </picture>
+                </div>
+                <div class="style-img img3">
+                    <picture>
+                        <source srcset="./assets/img/st_03_sub_3.webp" type="image/webp" />
+                        <img src="./assets/img/st_03_sub_3.jpg" width="960" height="1440" alt="" />
+                      </picture>
+                </div>
+                <div class="credit-wrapper">
+                    <%
+                    for (var i = 1; i < 5; i++) {
+                    %>
+                       <%-  include('./../parts/_credit', {price: '¥00,000', productName: 'Blouse', brandName: '(Miller for ADAM ET ROPÉ)', link: ''}) %>
+                    <%
+                        }
+                    %>
+                </div>
+            </div>
+            <%-  include('./../parts/_product', {index: '03', name: 'BLOUSE', price: '¥00,000', color: ['#000000', '#ffffff', '#6c6c97,#ffffff'], path: 'st_03_item', link: ''}) %>
+        </div>
+    </section>
+    <section id="style04" class="section style">
+        <div class="section__inner">
+            <h2 class="section-title absolute">
+                <span>BLOUSE</span>
+                <span>Style</span>
+                <span>04</span>
+            </h2>
+            <div class="style-imgs">
+                <div class="style-imgs-back absolute">
+                    </div>
+                <div class="style-img main">
+                    <div class="name">
+                       <%-  include('./../parts/_title04') %>
+                    </div>
+                    <picture>
+                        <source srcset="./assets/img/st_04_main_1.webp" type="image/webp" />
+                        <img src="./assets/img/st_04_main_1.jpg" width="960" height="1440" alt="" />
+                      </picture>
+                </div>
+                <div class="style-img img1">
+                    <picture>
+                        <source srcset="./assets/img/st_04_sub_1.webp" type="image/webp" />
+                        <img src="./assets/img/st_04_sub_1.jpg" width="960" height="1440" alt="" />
+                      </picture>
+                </div>
+                <div class="style-img img2">
+                    <picture>
+                        <source srcset="./assets/img/st_04_sub_3.webp" type="image/webp" />
+                        <img src="./assets/img/st_04_sub_3.jpg" width="960" height="1440" alt="" />
+                      </picture>
+                </div>
+                <div class="style-img medium img3">
+                    <picture>
+                        <source srcset="./assets/img/st_04_sub_2.webp" type="image/webp" />
+                        <img src="./assets/img/st_04_sub_2.jpg" width="960" height="1440" alt="" />
+                      </picture>
+                </div>
+                <div class="credit-wrapper">
+                    <%
+                    for (var i = 1; i < 5; i++) {
+                    %>
+                       <%-  include('./../parts/_credit', {price: '¥00,000', productName: 'Blouse', brandName: '(Miller for ADAM ET ROPÉ)', link: ''}) %>
+                    <%
+                        }
+                    %>
+                </div>
+            </div>
+            <%-  include('./../parts/_product', {index: '04', name: 'BLOUSE', price: '¥00,000', color: ['#000000', '#ffffff', '#6c6c97,#ffffff'], path: 'st_04_item', link: ''}) %>
+        </div>
+    </section>
+    <section id="style05" class="section style">
+        <div class="section__inner">
+            <h2 class="section-title absolute">
+                <span>BLOUSE</span>
+                <span>Style</span>
+                <span>05</span>
+            </h2>
+            <div class="style-imgs">
+                <div class="style-imgs-back absolute">
+                    </div>
+                <div class="style-img main">
+                    <div class="name">
+                       <%-  include('./../parts/_title05') %>
+                    </div>
+                    <picture>
+                        <source srcset="./assets/img/st_05_main_1.webp" type="image/webp" />
+                        <img src="./assets/img/st_05_main_1.jpg" width="960" height="1440" alt="" />
+                      </picture>
+                </div>
+                <div class="style-img img1">
+                    <picture>
+                        <source srcset="./assets/img/st_05_sub_1.webp" type="image/webp" />
+                        <img src="./assets/img/st_05_sub_1.jpg" width="960" height="1440" alt="" />
+                      </picture>
+                </div>
+                <div class="style-img medium img2">
+                    <picture>
+                        <source srcset="./assets/img/st_05_sub_2.webp" type="image/webp" />
+                        <img src="./assets/img/st_05_sub_2.jpg" width="960" height="1440" alt="" />
+                      </picture>
+                </div>
+                <div class="style-img img3">
+                    <picture>
+                        <source srcset="./assets/img/st_05_sub_3.webp" type="image/webp" />
+                        <img src="./assets/img/st_05_sub_3.jpg" width="960" height="1440" alt="" />
+                      </picture>
+                </div>
+                <div class="credit-wrapper">
+                    <%
+                    for (var i = 1; i < 5; i++) {
+                    %>
+                       <%-  include('./../parts/_credit', {price: '¥00,000', productName: 'Blouse', brandName: '(Miller for ADAM ET ROPÉ)', link: ''}) %>
+                    <%
+                        }
+                    %>
+                </div>
+            </div>
+            <%-  include('./../parts/_product', {index: '05', name: 'BLOUSE', price: '¥00,000', color: ['#000000', '#ffffff', '#6c6c97,#ffffff'], path: 'st_05_item', link: ''}) %>
+        </div>
+    </section>
+    <section id="style06" class="section style">
+        <div class="section__inner">
+            <h2 class="section-title absolute">
+                <span>BLOUSE</span>
+                <span>Style</span>
+                <span>06</span>
+            </h2>
+            <div class="style-imgs">
+                <div class="style-imgs-back absolute">
+                    </div>
+                <div class="style-img main">
+                    <div class="name">
+                       <%-  include('./../parts/_title06') %>
+                    </div>
+                    <picture>
+                        <source srcset="./assets/img/st_06_main_1.webp" type="image/webp" />
+                        <img src="./assets/img/st_06_main_1.jpg" width="960" height="1440" alt="" />
+                      </picture>
+                </div>
+                <div class="style-img img1">
+                    <picture>
+                        <source srcset="./assets/img/st_06_sub_1.webp" type="image/webp" />
+                        <img src="./assets/img/st_06_sub_1.jpg" width="960" height="1440" alt="" />
+                      </picture>
+                </div>
+                <div class="style-img medium img2">
+                    <picture>
+                        <source srcset="./assets/img/st_06_sub_2.webp" type="image/webp" />
+                        <img src="./assets/img/st_06_sub_2.jpg" width="960" height="1440" alt="" />
+                      </picture>
+                </div>
+                <div class="style-img img3">
+                    <picture>
+                        <source srcset="./assets/img/st_06_sub_3.webp" type="image/webp" />
+                        <img src="./assets/img/st_06_sub_3.jpg" width="960" height="1440" alt="" />
+                      </picture>
+                </div>
+                <div class="credit-wrapper">
+                    <%
+                    for (var i = 1; i < 5; i++) {
+                    %>
+                       <%-  include('./../parts/_credit', {price: '¥00,000', productName: 'Blouse', brandName: '(Miller for ADAM ET ROPÉ)', link: ''}) %>
+                    <%
+                        }
+                    %>
+                </div>
+            </div>
+            <%-  include('./../parts/_product', {index: '06', name: 'BLOUSE', price: '¥00,000', color: ['#000000', '#ffffff', '#6c6c97,#ffffff'], path: 'st_06_item', link: ''}) %>
+        </div>
+    </section>
+    <section id="credit" class="section">
+        <div class="section__inner">
+            <div class="img absolute">
+                    <picture>
+                        <source srcset="./assets/img/footer_img.webp" width="960" height="1440" type="image/webp" />
+                        <img loading="lazy" src="./assets/img/footer_img.jpg" width="960" height="1440" alt="" />
+                    </picture>
+                </div>
+            <p class="absolute">
+                PHOTOGRAPHER：Sakai De Jun<br/>
+                HAIR&MAKE：Kyoka Susa<br/>
+                MODEL：Sophie Patrece (Bon Image)
+                </p>
+            <div class="back">
+                    <picture>
+                        <source srcset="./assets/img/sky.webp" width="1600" height="1600" type="image/webp" />
+                        <img loading="lazy" src="./assets/img/sky.jpg" width="1600" height="1600" alt="" />
+                    </picture>
+                </div>
+            </div>
+    </section>
+    <%-  include('./../parts/_footer') %>
 </main>

@@ -1,0 +1,43 @@
+<div class="product flex flex-sp align-end justify-center">
+  <div class="product-img">
+    <picture>
+        <source srcset="./assets/img/<%- path %>.webp" type="image/webp" />
+        <img src="./assets/img/<%- path %>.jpg" width="960" height="960" alt="<%- name %>" />
+      </picture>
+  </div>
+  <div class="product-content">
+    <p class="product-name flex flex-sp flex-start ff">
+      <span class="index">
+      <%- index %>
+      </span>
+      <%- name %>
+    </p>
+    <p class="product-price aktiv">
+      <%- price %>
+    </p>
+    <div class="color-wrapper flex flex-sp">
+      <%
+        for (var i = 0; i < color.length; i++) {
+          var border = 'transparent';
+          if (color[i] === '#ffffff') {
+            border = '#DDDDDD';
+          }
+      %>
+        <div class="color" style="border: 1px solid <%- border %>; background-color: <%- color[i] %>"></div>
+      <%
+        }
+      %>
+    </div>
+    <a
+      href="<%- link %>"
+      target="_blank"
+      rel="noopener"
+      class="btn big"
+    >
+      <span class="btn__content">
+          <span>CHECK</span>
+          <span>CHECK</span>
+      </span>
+    </a>
+  </div>
+</div>
