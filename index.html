@@ -24,6 +24,7 @@
 rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
 />
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/swiper@8.2.4/swiper-bundle.min.css" />
 <link rel="stylesheet" href="./assets/css/style.min.css" />
 <script src="//cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js" defer></script>
 <script src=" //cdn.jsdelivr.net/npm/bowser@2.11.0/es5.min.js" defer></script>
@@ -61,11 +62,21 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
                 <h1 class="logo">
                     <img src="./assets/img/adam-et-rope.svg" width="211" height="21" alt="ADAM ET ROPÉ" />
                 </h1>
-                <div class="box-img active">
-                    <picture>
-                        <source srcset="./assets/img/sky.webp" width="1600" height="1600" type="image/webp" />
-                        <img loading="lazy" src="./assets/img/sky.jpg" width="1600" height="1600" alt="" />
-                    </picture>
+                <div class="swiper-container marquee-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <picture>
+                                <source srcset="./assets/img/sky_roll.webp" type="image/webp" />
+                                <img loading="lazy" src="./assets/img/sky_roll.png" width="3375" height="1080" alt="" />
+                            </picture>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture>
+                                <source srcset="./assets/img/sky_roll.webp" type="image/webp" />
+                                <img loading="lazy" src="./assets/img/sky_roll.png" width="3375" height="1080" alt="" />
+                            </picture>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="box kv">

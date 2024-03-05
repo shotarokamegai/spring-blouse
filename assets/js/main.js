@@ -351,7 +351,6 @@ var main = /*#__PURE__*/function () {
         var slides = 1.5;
         var speed = 700;
         var loop = true;
-        var center = true;
         var initialSlide = 0;
         var autoplay = {
           delay: 3000,
@@ -359,8 +358,9 @@ var main = /*#__PURE__*/function () {
           disableOnInteraction: false
         };
         if (thisSwiper.classList.contains('marquee-slider')) {
-          speed = 12000;
+          speed = 80000;
           slides = 1;
+          space = 0;
           autoplay = {
             delay: 0,
             // pauseOnMouseEnter: true,

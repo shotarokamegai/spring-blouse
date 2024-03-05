@@ -642,10 +642,10 @@ body .hidden {
 }
 
 @media screen and (max-width: 749px) {
-  .loaded main .section#top .wrapper .box:nth-child(1) .logo {
+  .loaded main .section#top .wrapper .box:nth-child(1) .swiper-container, .loaded main .section#top .wrapper .box:nth-child(1) .logo {
     opacity: 1;
   }
-  .loaded main .section#top .wrapper .box-img picture {
+  .loaded main .section#top .wrapper .box:nth-child(2) .box-img picture {
     opacity: 1;
     transform: scale(1);
   }
@@ -1051,34 +1051,24 @@ body .hidden {
     position: relative;
     overflow: hidden;
   }
-  main .section#top .wrapper .box-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%) scale(1) rotate(0);
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    opacity: 0;
-    overflow: hidden;
-  }
-  main .section#top .wrapper .box-img.active {
-    opacity: 1;
-  }
-  main .section#top .wrapper .box-img picture {
-    position: relative;
-    display: block;
-    opacity: 0;
-    transform: scale(1.1);
-    will-change: opacity, transform;
-  }
-  main .section#top .wrapper .box-img img, main .section#top .wrapper .box-img picture {
-    height: 100%;
-    width: 100%;
-  }
   main .section#top .wrapper .box:nth-child(1) {
     height: 59.2595419847vw;
+  }
+  main .section#top .wrapper .box:nth-child(1) .swiper-container {
+    width: 185.1860687023vw;
+    opacity: 0;
+    will-change: opacity;
+    transition: opacity cubic-bezier(0.19, 1, 0.22, 1) 2s 0.2s;
+  }
+  main .section#top .wrapper .box:nth-child(1) .swiper-container .swiper-wrapper {
+    transition-timing-function: linear;
+  }
+  main .section#top .wrapper .box:nth-child(1) .swiper-container .swiper-wrapper .swiper-slide img {
+    height: 59.2595419847vw;
+  }
+  main .section#top .wrapper .box:nth-child(1) picture, main .section#top .wrapper .box:nth-child(1) img {
+    width: auto;
+    max-width: initial;
   }
   main .section#top .wrapper .box:nth-child(1) .box-img picture {
     transition: transform cubic-bezier(0.19, 1, 0.22, 1) 2s, opacity cubic-bezier(0.19, 1, 0.22, 1) 2s;
@@ -1095,6 +1085,32 @@ body .hidden {
   }
   main .section#top .wrapper .box:nth-child(2) {
     height: 118.5190839695vw;
+  }
+  main .section#top .wrapper .box:nth-child(2) .box-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(1) rotate(0);
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    opacity: 0;
+    overflow: hidden;
+  }
+  main .section#top .wrapper .box:nth-child(2) .box-img.active {
+    opacity: 1;
+  }
+  main .section#top .wrapper .box:nth-child(2) .box-img picture {
+    position: relative;
+    display: block;
+    opacity: 0;
+    transform: scale(1.1);
+    will-change: opacity, transform;
+  }
+  main .section#top .wrapper .box:nth-child(2) .box-img img, main .section#top .wrapper .box:nth-child(2) .box-img picture {
+    height: 100%;
+    width: 100%;
   }
   main .section#top .wrapper .box:nth-child(2) .box-img picture {
     transition: transform cubic-bezier(0.19, 1, 0.22, 1) 2s 0.2s, opacity cubic-bezier(0.19, 1, 0.22, 1) 2s 0.2s;
@@ -1656,10 +1672,10 @@ body .hidden {
   }
 }
 @media screen and (min-width: 750px) {
-  .loaded main .section#top .wrapper .box:nth-child(1) .logo {
+  .loaded main .section#top .wrapper .box:nth-child(1) .swiper-container, .loaded main .section#top .wrapper .box:nth-child(1) .logo {
     opacity: 1;
   }
-  .loaded main .section#top .wrapper .box-img picture {
+  .loaded main .section#top .wrapper .box:nth-child(2) .box-img picture {
     opacity: 1;
     transform: scale(1);
   }
@@ -2035,7 +2051,7 @@ body .hidden {
     position: absolute;
     height: 100%;
     left: 33.3333333333vw;
-    z-index: 1;
+    z-index: 2;
   }
   main .section#top .title h2 {
     position: absolute;
@@ -2080,39 +2096,31 @@ body .hidden {
     height: 100%;
     overflow: hidden;
   }
-  main .section#top .wrapper .box-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%) scale(1) rotate(0);
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    opacity: 0;
-    overflow: hidden;
-  }
-  main .section#top .wrapper .box-img.active {
-    opacity: 1;
-  }
-  main .section#top .wrapper .box-img picture {
-    position: relative;
-    display: block;
-    opacity: 0;
-    transform: scale(1.1);
-    will-change: opacity, transform;
-  }
-  main .section#top .wrapper .box-img img, main .section#top .wrapper .box-img picture {
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
   main .section#top .wrapper .box:nth-child(1) {
     width: 33.3333333333vw;
   }
-  main .section#top .wrapper .box:nth-child(1) .box-img picture {
+  main .section#top .wrapper .box:nth-child(1) .swiper-container {
+    width: 175.78125vw;
+    opacity: 0;
+    will-change: opacity;
+    transition: opacity cubic-bezier(0.19, 1, 0.22, 1) 2s 0.2s;
+  }
+  main .section#top .wrapper .box:nth-child(1) .swiper-container .swiper-wrapper {
+    transition-timing-function: linear;
+  }
+  main .section#top .wrapper .box:nth-child(1) .swiper-container .swiper-wrapper .swiper-slide img {
+    height: 56.25vw;
+  }
+  main .section#top .wrapper .box:nth-child(1) picture, main .section#top .wrapper .box:nth-child(1) img {
+    width: auto;
+  }
+  main .section#top .wrapper .box:nth-child(1) picture {
     transition: transform cubic-bezier(0.19, 1, 0.22, 1) 2s, opacity cubic-bezier(0.19, 1, 0.22, 1) 2s;
+  }
+  main .section#top .wrapper .box:nth-child(1) picture img {
+    -o-object-fit: initial;
+       object-fit: initial;
+    max-width: initial;
   }
   main .section#top .wrapper .box:nth-child(1) .logo {
     position: absolute;
@@ -2127,6 +2135,32 @@ body .hidden {
   }
   main .section#top .wrapper .box:nth-child(2) {
     width: 66.6666666667vw;
+  }
+  main .section#top .wrapper .box:nth-child(2) .box-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(1) rotate(0);
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    overflow: hidden;
+  }
+  main .section#top .wrapper .box:nth-child(2) .box-img.active {
+    opacity: 1;
+  }
+  main .section#top .wrapper .box:nth-child(2) .box-img picture {
+    position: relative;
+    display: block;
+    opacity: 0;
+    transform: scale(1.1);
+    will-change: opacity, transform;
+  }
+  main .section#top .wrapper .box:nth-child(2) .box-img img, main .section#top .wrapper .box:nth-child(2) .box-img picture {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   main .section#top .wrapper .box:nth-child(2) .box-img picture {
     transition: transform cubic-bezier(0.19, 1, 0.22, 1) 2s 0.2s, opacity cubic-bezier(0.19, 1, 0.22, 1) 2s 0.2s;
@@ -2667,10 +2701,10 @@ body .hidden {
   }
 }
 @media screen and (min-width: 1440px) {
-  .loaded main .section#top .wrapper .box:nth-child(1) .logo {
+  .loaded main .section#top .wrapper .box:nth-child(1) .swiper-container, .loaded main .section#top .wrapper .box:nth-child(1) .logo {
     opacity: 1;
   }
-  .loaded main .section#top .wrapper .box-img picture {
+  .loaded main .section#top .wrapper .box:nth-child(2) .box-img picture {
     opacity: 1;
     transform: scale(1);
   }
@@ -3091,36 +3125,20 @@ body .hidden {
     height: 100%;
     overflow: hidden;
   }
-  main .section#top .wrapper .box-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%) scale(1) rotate(0);
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    opacity: 0;
-    overflow: hidden;
-  }
-  main .section#top .wrapper .box-img.active {
-    opacity: 1;
-  }
-  main .section#top .wrapper .box-img picture {
-    position: relative;
-    display: block;
-    opacity: 0;
-    transform: scale(1.1);
-    will-change: opacity, transform;
-  }
-  main .section#top .wrapper .box-img img, main .section#top .wrapper .box-img picture {
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
   main .section#top .wrapper .box:nth-child(1) {
     width: 33.3333333333%;
+  }
+  main .section#top .wrapper .box:nth-child(1) .swiper-container {
+    width: 253.125rem;
+    opacity: 0;
+    will-change: opacity;
+    transition: opacity cubic-bezier(0.19, 1, 0.22, 1) 2s 0.2s;
+  }
+  main .section#top .wrapper .box:nth-child(1) .swiper-container .swiper-wrapper {
+    transition-timing-function: linear;
+  }
+  main .section#top .wrapper .box:nth-child(1) .swiper-container .swiper-wrapper .swiper-slide img {
+    height: 81rem;
   }
   main .section#top .wrapper .box:nth-child(1) .box-img picture {
     transition: transform cubic-bezier(0.19, 1, 0.22, 1) 2s, opacity cubic-bezier(0.19, 1, 0.22, 1) 2s;
@@ -3138,6 +3156,34 @@ body .hidden {
   }
   main .section#top .wrapper .box:nth-child(2) {
     width: 66.6666666667%;
+  }
+  main .section#top .wrapper .box:nth-child(2) .box-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(1) rotate(0);
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    opacity: 0;
+    overflow: hidden;
+  }
+  main .section#top .wrapper .box:nth-child(2) .box-img.active {
+    opacity: 1;
+  }
+  main .section#top .wrapper .box:nth-child(2) .box-img picture {
+    position: relative;
+    display: block;
+    opacity: 0;
+    transform: scale(1.1);
+    will-change: opacity, transform;
+  }
+  main .section#top .wrapper .box:nth-child(2) .box-img img, main .section#top .wrapper .box:nth-child(2) .box-img picture {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   main .section#top .wrapper .box:nth-child(2) .box-img picture {
     transition: transform cubic-bezier(0.19, 1, 0.22, 1) 2s 0.2s, opacity cubic-bezier(0.19, 1, 0.22, 1) 2s 0.2s;

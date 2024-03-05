@@ -220,7 +220,6 @@ class main {
       let slides = 1.5;
       let speed = 700;
       let loop = true;
-      let center = true;
       let  initialSlide = 0;
       let autoplay = {
           delay: 3000,
@@ -228,8 +227,9 @@ class main {
           disableOnInteraction: false,
         };
       if (thisSwiper.classList.contains('marquee-slider')) {
-        speed = 12000;
+        speed = 80000;
         slides = 1;
+        space = 0;
         autoplay = {
           delay: 0,
           // pauseOnMouseEnter: true,
