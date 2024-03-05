@@ -621,7 +621,27 @@ body {
             position: relative;
             margin-bottom: vw(24);
             width: vw(290);
-            overflow: hidden;
+            &__inner {
+              transform: translate3d(0, vw(50), 0);
+              will-change: transform;
+              overflow: hidden;
+              transition: transform $slow 2s;
+              &::before {
+                content: '';
+                @include center();
+                height: 100%;
+                width: 100%;
+                background-color: $white;
+              }
+              picture {
+                position: relative;
+                opacity: 0;
+                display: block;
+                will-change: opacity;
+                transition: opacity $slow 2s;
+                z-index: 2;
+              }
+            }
             a {
               @include center();
               height: 100%;
@@ -637,16 +657,17 @@ body {
                 transition: transform $slow 2s, opacity $slow 2s;
               }
             }
+            &.active {
+              .product-img__inner {
+                transform: translate3d(0, 0, 0);
+                picture {
+                  opacity: 1;
+                }
+              }
+            }
             &:active picture img {
               opacity: .5;
               transform: translate3d(0, 0, 0) scale(1.05);
-            }
-            &::before {
-              content: '';
-              @include center();
-              height: 100%;
-              width: 100%;
-              background-color: $white;
             }
           }
           &-name {
@@ -1568,7 +1589,28 @@ body {
             position: relative;
             margin-right: vwPc(36);
             width: vwPc(416);
-            overflow: hidden;
+            &__inner {
+              overflow: hidden;
+              transform: translate3d(0, vw(50), 0);
+              will-change: transform;
+              transition: transform $slow 2s;
+              overflow: hidden;
+              &::before {
+                content: '';
+                @include center();
+                height: 100%;
+                width: 100%;
+                background-color: $white;
+              }
+              picture {
+                position: relative;
+                opacity: 0;
+                display: block;
+                will-change: opacity;
+                transition: opacity $slow 2s;
+                z-index: 2;
+              }
+            }
             a {
               @include center();
               height: 100%;
@@ -1584,16 +1626,17 @@ body {
                 transition: transform $slow 2s, opacity $slow 2s;
               }
             }
+            &.active {
+              .product-img__inner {
+                transform: translate3d(0, 0, 0);
+                picture {
+                  opacity: 1;
+                }
+              }
+            }
             &:hover picture img {
               opacity: .5;
               transform: translate3d(0, 0, 0) scale(1.05);
-            }
-            &::before {
-              content: '';
-              @include center();
-              height: 100%;
-              width: 100%;
-              background-color: $white;
             }
           }
           &-name {
@@ -2502,7 +2545,28 @@ body {
               position: relative;
               margin-right: rem(36);
               width: rem(416);
-              overflow: hidden;
+              &__inner {
+                overflow: hidden;
+                transform: translate3d(0, vw(50), 0);
+                will-change: transform;
+                transition: transform $slow 2s;
+                overflow: hidden;
+                &::before {
+                  content: '';
+                  @include center();
+                  height: 100%;
+                  width: 100%;
+                  background-color: $white;
+                }
+                picture {
+                  position: relative;
+                  opacity: 0;
+                  display: block;
+                  will-change: opacity;
+                  transition: opacity $slow 2s;
+                  z-index: 2;
+                }
+              }
               a {
                 @include center();
                 height: 100%;
@@ -2518,16 +2582,17 @@ body {
                   transition: transform $slow 2s, opacity $slow 2s;
                 }
               }
+              &.active {
+                .product-img__inner {
+                  transform: translate3d(0, 0, 0);
+                  picture {
+                    opacity: 1;
+                  }
+                }
+              }
               &:hover picture img {
                 opacity: .5;
                 transform: translate3d(0, 0, 0) scale(1.05);
-              }
-              &::before {
-                content: '';
-                @include center();
-                height: 100%;
-                width: 100%;
-                background-color: $white;
               }
             }
             &-name {
