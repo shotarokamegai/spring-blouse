@@ -44,6 +44,9 @@ body {
   &.visited {
     opacity: 1;
   }
+  picture {
+    display: block;
+  }
   .hidden {
     visibility: hidden;
   }
@@ -93,7 +96,7 @@ body {
   }
   #footer {
     padding: vw(48) 0 vw(20);
-    background-color: $bg1;
+    background-color: #F2F2F2;
     nav {
       margin-bottom: 6.060606060606061%;
       ul {
@@ -176,10 +179,10 @@ body {
   #vertical {
     position: fixed;
     top: 0;
-    left: vwPc(625);
+    right: vw(70);
     // height: 100%;
     height: 0;
-    width: vwPc(4);
+    width: vw(2);
     background-color: $accent_1;
     will-change: height;
     transition: height $zoom 1s;
@@ -203,12 +206,16 @@ body {
     }
     .style-img {
       position: relative;
-      width: vwPc(303);
+      width: vw(170);
       overflow: hidden;
       picture img {
         position: relative;
         will-change: opacity, transform;
         transition: transform $slow 2s, opacity $slow 2s;
+      }
+      picture {
+        position: relative;
+        z-index: 1;
       }
       a {
         @include center();
@@ -216,7 +223,7 @@ body {
         width: 100%;
         z-index: 2;
       }
-      &:hover picture img {
+      &:active picture img {
         opacity: .5;
         transform: translate3d(0, 0, 0) scale(1.05);
       }
@@ -242,6 +249,7 @@ body {
         svg {
           position: relative;
           display: block;
+          height: 100%;
           width: 100%;
           path {
             position: relative;
@@ -262,22 +270,24 @@ body {
       }
       picture {
         position: relative;
-        z-index: 1;
+        z-index: 2;
       }
       &.main {
-        width: vwPc(642);
+        width: vw(290);
         overflow: visible;
         .main__inner {
+          position: relative;
           overflow: hidden;
+          z-index: 1;
         }
       }
       &.medium {
-        width: vwPc(416);
+        width: vw(230);
       }
     }
     .credit-wrapper {
       .credit {
-        margin-bottom: vwPc(12);
+        margin-bottom: vw(24);
         &:last-child {
           margin-bottom: 0;
         }
@@ -285,45 +295,46 @@ body {
     }
     .credit {
       .price {
-        @include fontvwPc(12);
+        @include fontvw(12);
       }
       .btn {
-        margin-left: vwPc(16);
+        margin-left: vw(16);
       }
     }
     .color-wrapper {
       .color {
-        margin-right: vwPc(16);
+        margin-right: vw(8);
         &:last-child {
           margin-right: 0;
         }
       }
     }
     .color {
-      height: vwPc(48); 
-      width: vwPc(48); 
+      height: vw(18); 
+      width: vw(18); 
       border-radius: 100%;
     }
     .btn {
       position: relative;
       display: inline-block;
-      height: vwPc(24);
-      line-height: vwPc(22);
-      width: vwPc(65);
+      height: vw(24);
+      line-height: vw(22);
+      width: vw(65);
       text-align: center;
-      border: vwPc(1) solid $accent_1;
+      border: vw(1) solid $accent_1;
+      background-color: $white;
       transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
       &.big {
-        height: vwPc(48);
-        line-height: vwPc(46);
-        width: vwPc(190);
+        height: vw(48);
+        line-height: vw(46);
+        width: vw(190);
         background-color: $black;
-        border: vwPc(1) solid $black;
-        &:hover {
+        border: vw(1) solid $black;
+        &:active {
           background-color: $white;
         }
         span {
-          @include fontvwPc(14);
+          @include fontvw(14);
         }
         .btn__content {
           span {
@@ -336,7 +347,7 @@ body {
           }
         }
       }
-      &:hover {
+      &:active {
         background-color: $accent_1;
         .btn__content {
           span {
@@ -371,41 +382,46 @@ body {
       }
       span {
         display: block;
-        @include fontvwPc(12);
+        @include fontvw(12);
         font-family: $Aktiv;
       }
     }
     .section {
       position: relative;
       &-text {
-        @include fontvwPc(16); 
+        @include fontvw(16); 
         line-height: (32 / 16);
         text-align: center;
       }
       &__inner {
         position: relative;
         margin: 0 auto;
-        width: vwPc(1320);
+        width: vw(350);
       }
       &#top {
-        height: vwPc(810);
+        // height: vwPc(810);
         background-color: $white;
         .title {
           position: absolute;
-          height: 100%;
-          left: vwPc(480);
+          top: vw(101);
+          left: 0;
+          width: 100%;
           z-index: 1;
           h2 {
-            @include center();
-            width: vwPc(292.35);
+            position: absolute;
+            top: 0;
+            left: vw(24);
+            width: vw(230.49);
             opacity: 0;
             will-change: opacity;
             transition: opacity $ziwaziwa 1s 1s;
           }
           .bar {
             position: absolute;
-            height: vwPc(202.5);
-            width: vwPc(30);
+            top: vw(131);
+            right: 0;
+            height: vw(10.92);
+            width: vw(136.46);
             overflow: hidden;
             div {
               height: 100%;
@@ -415,25 +431,15 @@ body {
               transition: transform $zoom 1s .5s;
             }
             &.bar1 {
-              top: 0;
               div {
-                transform: translate3d(0, -100%, 0);
-              }
-            }
-            &.bar2 {
-              bottom: 0;
-              div {
-                transform: translate3d(0, -100%, 0);
-                // transform: translate3d(0, 100%, 0);
+                transform: translate3d(100%, 0, 0);
               }
             }
           }
         }
         .wrapper {
-          height: 100%;
           .box {
             position: relative;
-            height: 100%;
             overflow: hidden;
             &-img {
               @include center();
@@ -458,16 +464,15 @@ body {
               }
             }
             &:nth-child(1) {
-              width: vwPc(480);
+              height: vw(232.89);
               .box-img picture {
                 transition: transform $slow 2s, opacity $slow 2s;
               }
               .logo {
                 position: absolute;
-                top: vwPc(181.5);
-                left: 50%;
-                width: vwPc(211.22);
-                transform: translate3d(-50%, 0, 0);
+                top: vw(48);
+                left: vw(24);
+                width: vw(102.48);
                 opacity: 0;
                 will-change: opacity;
                 transition: opacity $ziwaziwa 1s .5s;
@@ -475,7 +480,7 @@ body {
               }
             }
             &:nth-child(2) {
-              width: vwPc(960);
+              height: vw(465.78);
               .box-img picture {
                 transition: transform $slow 2s .2s, opacity $slow 2s .2s;
               }
@@ -488,19 +493,24 @@ body {
         }
       }
       &#index {
-        padding: vwPc(64) 0 vwPc(80);
+        padding: vw(48) 0 vw(64);
         background-color: $bg2;
         .section-text {
           margin-bottom: vwPc(48);
         }
         .wrapper {
+          flex-wrap: wrap;
           .box {
             position: relative;
-            margin-right: vwPc(32);
-            width: vwPc(160);
+            margin-right: vw(10);
+            margin-bottom: vw(10);
+            width: vw(110);
             opacity: 0;
-            transform: translate3d(0, vwPc(50), 0);
+            transform: translate3d(0, vw(50), 0);
             will-change: opacity, transform;
+            &:nth-child(3n) {
+              margin-right: 0;
+            }
             @for $i from 1 through 6 {
               &:nth-child(#{$i}) {
                 transition: transform $slow 2s #{($i - 1) * .1}s, opacity $slow 2s #{($i - 1) * .1}s;
@@ -510,7 +520,7 @@ body {
               opacity: 1;
               transform: translate3d(0, 0, 0) scale(1);
             }
-            &:hover {
+            &:active {
               .box-img {
                 img {
                   opacity: .5;
@@ -523,21 +533,21 @@ body {
             }
             &-title {
               position: absolute;
-              top: vwPc(8);
-              left: vwPc(-16);
+              top: vw(8);
+              left: vw(-8);
               writing-mode: vertical-rl;
-              @include fontvwPc(24);
+              @include fontvw(14);
               @include tracking(150);
               // letter-spacing: 30%;
               font-weight: 400;
               color: $accent_1;
               z-index: 1;
               .ffcomp {
-                letter-spacing: .5vw;
+                letter-spacing: 1vw;
               }
               .num {
-                margin-top: vwPc(16);
-                @include fontvwPc(36);
+                margin-top: vw(4);
+                @include fontvw(22);
               }
             }
             &-img {
@@ -565,6 +575,7 @@ body {
           width: 100%;
         }
         .section-title {
+          position: relative;
           display: inline-block;
           color: $accent_1;
           &.active {
@@ -576,25 +587,25 @@ body {
           span {
             display: block;
             opacity: 0;
-            transform: translate3d(0, vwPc(50), 0);
+            transform: translate3d(0, vw(50), 0);
             @for $i from 1 through 3 {
               &:nth-child(#{$i}) {
                 transition: transform $slow 1s #{($i - 1) * .1}s, opacity $slow 1s #{($i - 1) * .1}s;
               }
             }
             &:nth-child(1) {
-              @include fontvwPc(24);
+              @include fontvw(16);
               font-weight: 300;  
               letter-spacing: 0.15vw;
             }
             &:nth-child(2) {
-              @include fontvwPc(64);
+              @include fontvw(38);
               letter-spacing: .45vw;
             }
             &:nth-child(3) {
-              margin-top: vwPc(-10);
-              margin-left: vwPc(68);
-              @include fontvwPc(80);
+              margin-top: vw(-5);
+              margin-left: vw(40);
+              @include fontvw(46);
               font-weight: 400;  
             }
           }
@@ -603,8 +614,8 @@ body {
           position: relative;
           &-img {
             position: relative;
-            margin-right: vwPc(36);
-            width: vwPc(416);
+            margin-bottom: vw(24);
+            width: vw(290);
             overflow: hidden;
             a {
               @include center();
@@ -621,7 +632,7 @@ body {
                 transition: transform $slow 2s, opacity $slow 2s;
               }
             }
-            &:hover picture img {
+            &:active picture img {
               opacity: .5;
               transform: translate3d(0, 0, 0) scale(1.05);
             }
@@ -634,15 +645,15 @@ body {
             }
           }
           &-name {
-            margin-bottom: vwPc(24);
-            @include fontvwPc(42);
+            margin-bottom: vw(24);
+            @include fontvw(32);
             font-weight: 300;
             color: $accent_1;
             .index {
               position: relative;
               top: 0.2vw;
-              margin-right: vwPc(8);
-              @include fontvwPc(16);
+              margin-right: vw(8);
+              @include fontvw(16);
               font-weight: 700; 
               letter-spacing: .1vw;
             }
@@ -651,25 +662,26 @@ body {
             }
           }
           &-price {
-            @include fontvwPc(16);
+            @include fontvw(16);
           }
           .btn, .color-wrapper {
-            margin-top: vwPc(32); 
+            margin-top: vw(24); 
           }
         }
         &#style01 {
-          padding: vwPc(120) 0 vwPc(200);
+          padding: vw(40) 0 vw(64);
           .section-title {
             top: 0;
-            left: vwPc(173);
+            left: vw(148);
           }
           .product {
-            margin-top: vwPc(234);
+            margin: vw(48) auto 0;
+            width: vw(290);
           }
           .style-imgs-back {
-            height: vwPc(728);
-            width: vwPc(1267);
-            top: vwPc(380);
+            height: vw(372);
+            width: vw(372);
+            top: vw(282);
             left: 0;
             div {
               background-color: #DDDBEB;
@@ -677,92 +689,98 @@ body {
           }
           .style-img {
             &-name {
-              top: vwPc(56);
-              right: vwPc(25);
-              width: vwPc(145.53);
+              top: vw(38);
+              right: vw(7.84);
+              width: vw(73.16);
+              height: vw(358.47)
             }
             &.main {
-              margin-left: vwPc(512);
+              margin-top: vw(37);
+              margin-left: vw(22);
             }
             &.img1 {
-              margin-top: vwPc(-160);
-              margin-left: vwPc(286);
+              margin-top: vw(16);
+              margin-left: vw(22);
             }
             &.img2 {
-              margin-top: vwPc(-230);
-              margin-left: vwPc(625);
+              margin-top: vw(-231);
+              margin-left: auto;
+              margin-right: 0;
             }
             &.img3 {
-              margin-top: vwPc(-624);
-              margin-left: vwPc(1077);
+              margin-top: vw(-26);
+              margin-left: vw(82);
             }
           }
           .credit-wrapper {
-            position: absolute;
-            bottom: 0;
-            left: vwPc(173);
+            margin-top: vw(40);
+            margin-left: vw(22);
           }
         }
         &#style02 {
-          padding: 0 0 vwPc(200);
+          padding: 0 0 vw(64);
           .section-title {
             top: 0;
-            right: vwPc(206);
+            left: vw(22);
           }
           .product {
-            margin-top: vwPc(-100);
+            margin: vw(48) auto 0;
+            width: vw(290);
           }
           .style-imgs-back {
-            height: vwPc(728);
-            width: vwPc(1094);
-            bottom: 0;
-            right: vwPc(60);
+            height: vw(641);
+            width: vw(371);
+            top: vw(362);
+            right: 0;
             div {
               background-color: $bg1;
             }
           }
           .style-img {
             &-name {
-              top: vwPc(-37);
-              right: vwPc(-20);
-              width: vwPc(219.44);
+              top: vw(-24);
+              right: vw(-4);
+              width: vw(110.24);
             }
             &.main {
-              margin-left: vwPc(60);
+              margin-top: vw(37);
+              margin-left: vw(82);
             }
             &.img1 {
-              margin-top: vwPc(-534);
-              margin-left: auto;
-              margin-right: vwPc(173);
+              position: relative;
+              margin-top: vw(-40);
+              margin-left: vw(22);
+              z-index: 2;
             }
             &.img2 {
-              margin-top: vwPc(-209);
-              margin-left: vwPc(512);
+              margin-top: vw(-125);
+              margin-right: 0;
+              margin-left: auto;
             }
             &.img3 {
-              margin-top: vwPc(-182);
-              margin-left: vwPc(60);
+              margin-top: vw(16);
+              margin-left: vw(82);
             }
           }
           .credit-wrapper {
-            position: absolute;
-            top: vwPc(252);
-            right: vwPc(269);
+            margin-top: vw(40);
+            margin-left: vw(22);
           }
         }
         &#style03 {
-          padding: 0 0 vwPc(200);
+          padding: 0 0 vw(64);
           .section-title {
-            top: vwPc(120);
-            left: vwPc(173);
+            top: 0;
+            right: vw(100);
           }
           .product {
-            margin-top: vwPc(80);
+            margin: vw(48) auto 0;
+            width: vw(290);
           }
           .style-imgs-back {
-            height: vwPc(720);
-            width: vwPc(1440);
-            bottom: vwPc(-957);
+            height: vw(590);
+            width: 100vw;
+            bottom: vw(-928);
             left: 50%;
             transform: translate3d(-50%, 0, 0);
             picture, img {
@@ -784,121 +802,127 @@ body {
           }
           .style-img {
             &-name {
-              top: vwPc(-63);
-              left: vwPc(29);
-              width: vwPc(184.38);
+              top: vw(14);
+              left: vw(-17);
+              width: vw(92.78);
             }
             &.main {
-              margin-left: auto;
-              margin-right: vwPc(60);
+              margin-left: vw(52);
             }
             &.img1 {
-              margin-top: vwPc(-359);
-              margin-left: vwPc(20);
+              margin-top: vw(-40);
+              margin-left: 0;
+              z-index: 2;
             }
             &.img2 {
-              margin-top: vwPc(-209);
-              margin-left: vwPc(400);
+              margin-top: vw(-191);
+              margin-left: auto;
+              margin-right: 0;
+              z-index: 3;
             }
             &.img3 {
-              margin-top: vwPc(-468);
-              margin-left: auto;
-              margin-right: vwPc(174);
+              margin-top: vw(-64);
+              margin-left: vw(22);
             }
           }
           .credit-wrapper {
-            position: absolute;
-            top: vwPc(332);
-            left: vwPc(286);
+            margin-top: vw(40);
+            margin-left: vw(22);
           }
         }
         &#style04 {
-          padding: 0 0 vwPc(160);
+          padding: 0 0 vw(64);
           .section-title {
             top: 0;
-            right: vwPc(424);
+            left: vw(22);
           }
           .product {
-            margin-top: vwPc(-370);
-            margin-left: vwPc(625);
-            justify-content: flex-start;
+            margin: vw(48) auto 0;
+            width: vw(290);
           }
           .style-img {
             &-name {
-              top: vwPc(-40);
-              left: vwPc(-36.5);
-              width: vwPc(73);
+              top: vw(40);
+              left: vw(-12);
+              width: 6vw;
+              // width: vw(37);
             }
             &.main {
-              margin-left: vwPc(173);
+              margin-left: auto;
+              margin-right: 0;
             }
             &.img1 {
-              margin-top: vwPc(-240);
-              margin-left: auto;
-              margin-right: vwPc(400);
+              margin-top: vw(-24);
+              margin-left: vw(22);
             }
             &.img2 {
-              margin-top: vwPc(-454);
-              margin-left: auto;
-              margin-right: vwPc(97);
+              margin-top: vw(-255);
+              margin-left: vw(192);
             }
             &.img3 {
-              margin-top: vwPc(-124);
-              margin-left: vwPc(60);
+              margin-top: vw(24);
+              margin-left: 0;
             }
           }
           .credit-wrapper {
-            position: absolute;
-            top: vwPc(420);
-            right: vwPc(156);
+            margin-top: vw(40);
+            margin-left: vw(22);
           }
         }
         &#style05 {
-          padding: 0 0 vwPc(200);
+          padding: 0 0 vw(64);
+          .style-imgs-back {
+            height: vw(371);
+            width: vw(371);
+            top: vw(559);
+            right: 0;
+            div {
+              background-color: #DDDBEB;
+            }
+          }
           .section-title {
             top: 0;
-            left: vwPc(60);
+            left: vw(148);
           }
           .product {
-            margin-top: vwPc(250);
-            margin-left: vwPc(286);
-            justify-content: flex-start;
+            margin: vw(48) auto 0;
+            width: vw(290);
           }
           .style-img {
             &-name {
-              top: vwPc(190);
-              right: vwPc(-115);
-              width: vwPc(177.74);
+              top: vw(88);
+              right: vw(-53);
+              width: vw(89.24);
             }
             &.main {
-              margin-left: vwPc(400);
+              margin-top: vw(37);
+              margin-left: 0;
             }
             &.img1 {
-              margin-top: vwPc(-113);
-              margin-left: vwPc(286);
+              margin-top: vw(-40);
+              margin-left: auto;
+              margin-right: vw(22);
+              z-index: 2;
             }
             &.img2 {
-              margin-top: vwPc(-270);
-              margin-left: vwPc(625);
+              margin-top: vw(-191);
+              margin-left: 0;
             }
             &.img3 {
-              margin-top: vwPc(-624);
-              margin-right: vwPc(60);
-              margin-left: auto;
+              margin-left: vw(142);
             }
           }
           .credit-wrapper {
-            position: absolute;
-            top: vwPc(1377);
-            left: vwPc(173);
+            margin-top: vw(40);
+            margin-left: vw(22);
           }
         }
         &#style06 {
-          padding: 0 0 vwPc(550);
+          padding: 0 0 vw(240);
           .style-imgs-back {
-            height: vwPc(728);
-            width: vwPc(928);
-            top: vwPc(630);
+            height: vw(641);
+            width: vw(312);
+            top: vw(275);
             left: 0;
             div {
               background-color: $bg1;
@@ -906,41 +930,40 @@ body {
           }
           .section-title {
             top: 0;
-            left: vwPc(738);
+            margin-left: vw(262);
           }
           .product {
-            margin-top: vwPc(88);
-            margin-left: vwPc(286);
-            justify-content: flex-start;
+            margin: vw(48) auto 0;
+            width: vw(290);
           }
           .style-img {
             &-name {
-              top: vwPc(-47);
-              left: vwPc(14);
-              width: vwPc(282.4);
+              top: vw(-42);
+              left: vw(-66);
+              width: vw(141.2);
             }
             &.main {
-              margin-left: vwPc(60);
+              margin-top: vw(37);
+              margin-left: vw(81);
             }
             &.img1 {
-              margin-top: vwPc(-494);
-              margin-left: auto;
-              margin-right: vwPc(400);
+              margin-top: vw(-120);
+              margin-left: vw(22);
+              z-index: 2;
             }
             &.img2 {
-              margin-top: vwPc(-80);
-              margin-left: vwPc(400);
+              margin-top: vw(-111);
+              margin-left: auto;
+              margin-right: 0;
             }
             &.img3 {
-              margin-top: vwPc(-384);
-              margin-right: vwPc(173);
-              margin-left: auto;
+              margin-top: vw(24);
+              margin-left: vw(82);
             }
           }
           .credit-wrapper {
-            position: absolute;
-            top: vwPc(221);
-            right: vwPc(253);
+            margin-top: vw(40);
+            margin-left: vw(22);
           }
         }
       }
@@ -949,9 +972,10 @@ body {
           width: 100%;
         }
         .img {
-          top: vwPc(-388);
-          left: vwPc(400);
-          width: vwPc(643);
+          top: vw(-120);
+          left: 50%;
+          width: vw(350);
+          transform: translate3d(-50%, 0, 0);
           z-index: 1;
           picture {
             position: relative;
@@ -966,15 +990,17 @@ body {
           }
         }
         p {
-          right: vwPc(500);
-          bottom: vwPc(80);
-          @include fontvwPc(12);
+          left: 50%;
+          bottom: vw(80);
+          white-space: nowrap;
+          @include fontvw(12);
+          transform: translate3d(-50%, 0, 0);
           line-height: (24 /12);
           color: $accent_1;
           z-index: 1;
         }
         .back {
-          height: vwPc(778);
+          height: vw(575);
           picture, img {
             height: 100%;
             width: 100%;
@@ -1736,9 +1762,9 @@ body {
           }
           .style-img {
             &-name {
-              top: vwPc(-40);
-              left: vwPc(-36.5);
-              width: vwPc(73);
+              top: vwPc(40);
+              left: -1.934722vw;
+              width: 3.3vw;
             }
             &.main {
               margin-left: vwPc(173);
@@ -2649,9 +2675,10 @@ body {
             }
             .style-img {
               &-name {
-                top: rem(-40);
-                left: rem(-36.5);
-                width: rem(73);
+                top: rem(40);
+                left: rem(-28);
+                width: rem(47.484);
+                // width: rem(73);
               }
               &.main {
                 margin-left: rem(173);
