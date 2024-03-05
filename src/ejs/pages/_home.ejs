@@ -1,5 +1,5 @@
 <main id="home">
-    <div class="vertical">
+    <div class="vertical" id="vertical">
         <div></div>
     </div>
     <section id="top" class="section">
@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="box kv">
-                <div class="box-img active">
+                <div class="box-img kv-img active">
                     <picture>
                         <source srcset="./assets/img/sp_kv_st-1.webp" width="1080" height="1280" media="(max-width:749px)" type="image/webp" />
                         <source srcset="./assets/img/sp_kv_st-1.jpg" width="1080" height="1280" media="(max-width:749px)" />
@@ -35,7 +35,7 @@
                         <img src="./assets/img/pc_kv_st-1.jpg" width="1280" height="1080" alt="" />
                       </picture>
                 </div>
-                <div class="box-img">
+                <div class="box-img kv-img">
                     <picture>
                         <source srcset="./assets/img/sp_kv_st-2.webp" width="1080" height="1280" media="(max-width:749px)" type="image/webp" />
                         <source srcset="./assets/img/sp_kv_st-2.jpg" width="1080" height="1280" media="(max-width:749px)" />
@@ -43,7 +43,7 @@
                         <img src="./assets/img/pc_kv_st-2.jpg" width="1280" height="1080" alt="" />
                       </picture>
                 </div>
-                <div class="box-img">
+                <div class="box-img kv-img">
                     <picture>
                         <source srcset="./assets/img/sp_kv_st-3.webp" width="1080" height="1280" media="(max-width:749px)" type="image/webp" />
                         <source srcset="./assets/img/sp_kv_st-3.jpg" width="1080" height="1280" media="(max-width:749px)" />
@@ -51,7 +51,7 @@
                         <img src="./assets/img/pc_kv_st-3.jpg" width="1280" height="1080" alt="" />
                       </picture>
                 </div>
-                <div class="box-img">
+                <div class="box-img kv-img">
                     <picture>
                         <source srcset="./assets/img/sp_kv_st-4.webp" width="1080" height="1280" media="(max-width:749px)" type="image/webp" />
                         <source srcset="./assets/img/sp_kv_st-4.jpg" width="1080" height="1280" media="(max-width:749px)" />
@@ -59,7 +59,7 @@
                         <img src="./assets/img/pc_kv_st-4.jpg" width="1280" height="1080" alt="" />
                       </picture>
                 </div>
-                <div class="box-img">
+                <div class="box-img kv-img">
                     <picture>
                         <source srcset="./assets/img/sp_kv_st-5.webp" width="1080" height="1280" media="(max-width:749px)" type="image/webp" />
                         <source srcset="./assets/img/sp_kv_st-5.jpg" width="1080" height="1280" media="(max-width:749px)" />
@@ -67,7 +67,7 @@
                         <img src="./assets/img/pc_kv_st-5.jpg" width="1280" height="1080" alt="" />
                       </picture>
                 </div>
-                <div class="box-img">
+                <div class="box-img kv-img">
                     <picture>
                         <source srcset="./assets/img/sp_kv_st-6.webp" width="1080" height="1280" media="(max-width:749px)" type="image/webp" />
                         <source srcset="./assets/img/sp_kv_st-6.jpg" width="1080" height="1280" media="(max-width:749px)" />
@@ -97,14 +97,14 @@
     </section>
     <section id="style01" class="section style">
         <div class="section__inner">
-            <h2 class="section-title absolute">
+            <h2 class="section-title absolute ff addactive">
                 <span>BLOUSE</span>
                 <span>Style</span>
                 <span>01</span>
             </h2>
             <div class="style-imgs">
-                <div class="style-img main">
-                    <div class="name">
+                <div class="style-img main show addactive">
+                    <div class="style-img-name">
                        <%-  include('./../parts/_title01') %>
                     </div>
                     <picture>
@@ -112,19 +112,19 @@
                         <img src="./assets/img/st_01_main_1.jpg" width="960" height="1440" alt="" />
                       </picture>
                 </div>
-                <div class="style-img img1">
+                <div class="style-img img1 show addactive">
                     <picture>
                         <source srcset="./assets/img/st_01_sub_1.webp" type="image/webp" />
                         <img src="./assets/img/st_01_sub_1.jpg" width="960" height="1440" alt="" />
                       </picture>
                 </div>
-                <div class="style-img medium img2">
+                <div class="style-img medium img2 show addactive">
                     <picture>
                         <source srcset="./assets/img/st_01_sub_3.webp" type="image/webp" />
                         <img src="./assets/img/st_01_sub_3.jpg" width="960" height="1440" alt="" />
                       </picture>
                 </div>
-                <div class="style-img img3">
+                <div class="style-img img3 show addactive">
                     <picture>
                         <source srcset="./assets/img/st_01_sub_2.webp" type="image/webp" />
                         <img src="./assets/img/st_01_sub_2.jpg" width="960" height="1440" alt="" />
@@ -145,15 +145,17 @@
     </section>
     <section id="style02" class="section style">
         <div class="section__inner">
-            <h2 class="section-title absolute">
+            <h2 class="section-title absolute ff addactive">
                 <span>BLOUSE</span>
                 <span>Style</span>
                 <span>02</span>
             </h2>
             <div class="style-imgs">
-                <div class="style-imgs-back absolute"></div>
-                <div class="style-img main">
-                    <div class="name">
+                <div class="style-imgs-back absolute parallax" data-amount="-20">
+                    <div class="scale-up"></div>
+                </div>
+                <div class="style-img main show addactive">
+                    <div class="style-img-name">
                        <%-  include('./../parts/_title02') %>
                     </div>
                     <picture>
@@ -161,19 +163,19 @@
                         <img src="./assets/img/st_02_main_1.jpg" width="960" height="1440" alt="" />
                       </picture>
                 </div>
-                <div class="style-img medium img1">
+                <div class="style-img medium img1 show addactive">
                     <picture>
                         <source srcset="./assets/img/st_02_sub_3.webp" type="image/webp" />
                         <img src="./assets/img/st_02_sub_3.jpg" width="960" height="1440" alt="" />
                       </picture>
                 </div>
-                <div class="style-img img2">
+                <div class="style-img img2 show addactive">
                     <picture>
                         <source srcset="./assets/img/st_02_sub_1.webp" type="image/webp" />
                         <img src="./assets/img/st_02_sub_1.jpg" width="960" height="1440" alt="" />
                       </picture>
                 </div>
-                <div class="style-img img3">
+                <div class="style-img img3 show addactive">
                     <picture>
                         <source srcset="./assets/img/st_02_sub_2.webp" type="image/webp" />
                         <img src="./assets/img/st_02_sub_2.jpg" width="960" height="1440" alt="" />
@@ -194,20 +196,20 @@
     </section>
     <section id="style03" class="section style">
         <div class="section__inner">
-            <h2 class="section-title absolute">
+            <h2 class="section-title absolute ff addactive">
                 <span>BLOUSE</span>
                 <span>Style</span>
                 <span>03</span>
             </h2>
             <div class="style-imgs">
-                <div class="style-imgs-back absolute">
-                    <picture>
+                <div class="style-imgs-back absolute parallax" data-amount="-20">
+                    <picture class="parallax" data-amount="-15">
                         <source srcset="./assets/img/sky.webp" type="image/webp" />
                         <img src="./assets/img/sky.jpg" width="720" height="1440" alt="" />
                       </picture>
                     </div>
-                <div class="style-img main">
-                    <div class="name">
+                <div class="style-img main show addactive">
+                    <div class="style-img-name">
                        <%-  include('./../parts/_title03') %>
                     </div>
                     <picture>
@@ -215,19 +217,19 @@
                         <img src="./assets/img/st_03_main_1.jpg" width="960" height="1440" alt="" />
                       </picture>
                 </div>
-                <div class="style-img img1">
+                <div class="style-img img1 show addactive">
                     <picture>
                         <source srcset="./assets/img/st_03_sub_1.webp" type="image/webp" />
                         <img src="./assets/img/st_03_sub_1.jpg" width="960" height="1440" alt="" />
                       </picture>
                 </div>
-                <div class="style-img medium img2">
+                <div class="style-img medium img2 show addactive">
                     <picture>
                         <source srcset="./assets/img/st_03_sub_2.webp" type="image/webp" />
                         <img src="./assets/img/st_03_sub_2.jpg" width="960" height="1440" alt="" />
                       </picture>
                 </div>
-                <div class="style-img img3">
+                <div class="style-img img3 show addactive">
                     <picture>
                         <source srcset="./assets/img/st_03_sub_3.webp" type="image/webp" />
                         <img src="./assets/img/st_03_sub_3.jpg" width="960" height="1440" alt="" />
@@ -243,21 +245,22 @@
                     %>
                 </div>
             </div>
-            <%-  include('./../parts/_product', {index: '03', name: 'BLOUSE', price: '¥00,000', color: ['#000000', '#ffffff', '#6c6c97,#ffffff'], path: 'st_03_item', link: ''}) %>
+            <%-  include('./../parts/_product', {index: '03', name: 'BLOUSE', price: '¥00,000', color: ['#000000', '#ffffff', '#4e4948,#ffffff', '＃90a6bc'], path: 'st_03_item', link: ''}) %>
         </div>
     </section>
     <section id="style04" class="section style">
         <div class="section__inner">
-            <h2 class="section-title absolute">
+            <h2 class="section-title absolute ff addactive">
                 <span>BLOUSE</span>
                 <span>Style</span>
                 <span>04</span>
             </h2>
             <div class="style-imgs">
-                <div class="style-imgs-back absolute">
-                    </div>
-                <div class="style-img main">
-                    <div class="name">
+                <div class="style-imgs-back absolute parallax" data-amount="-20">
+                    <div class="scale-up"></div>
+                </div>
+                <div class="style-img main show addactive">
+                    <div class="style-img-name">
                        <%-  include('./../parts/_title04') %>
                     </div>
                     <picture>
@@ -265,19 +268,19 @@
                         <img src="./assets/img/st_04_main_1.jpg" width="960" height="1440" alt="" />
                       </picture>
                 </div>
-                <div class="style-img img1">
+                <div class="style-img img1 show addactive">
                     <picture>
                         <source srcset="./assets/img/st_04_sub_1.webp" type="image/webp" />
                         <img src="./assets/img/st_04_sub_1.jpg" width="960" height="1440" alt="" />
                       </picture>
                 </div>
-                <div class="style-img img2">
+                <div class="style-img img2 show addactive">
                     <picture>
                         <source srcset="./assets/img/st_04_sub_3.webp" type="image/webp" />
                         <img src="./assets/img/st_04_sub_3.jpg" width="960" height="1440" alt="" />
                       </picture>
                 </div>
-                <div class="style-img medium img3">
+                <div class="style-img medium img3 show addactive">
                     <picture>
                         <source srcset="./assets/img/st_04_sub_2.webp" type="image/webp" />
                         <img src="./assets/img/st_04_sub_2.jpg" width="960" height="1440" alt="" />
@@ -293,21 +296,22 @@
                     %>
                 </div>
             </div>
-            <%-  include('./../parts/_product', {index: '04', name: 'BLOUSE', price: '¥00,000', color: ['#000000', '#ffffff', '#6c6c97,#ffffff'], path: 'st_04_item', link: ''}) %>
+            <%-  include('./../parts/_product', {index: '04', name: 'BLOUSE', price: '¥00,000', color: ['#000000', '#ffffff', '#ffffff,#000000', '#8ea3c9'], path: 'st_04_item', link: ''}) %>
         </div>
     </section>
     <section id="style05" class="section style">
         <div class="section__inner">
-            <h2 class="section-title absolute">
+            <h2 class="section-title absolute ff addactive">
                 <span>BLOUSE</span>
                 <span>Style</span>
                 <span>05</span>
             </h2>
             <div class="style-imgs">
-                <div class="style-imgs-back absolute">
-                    </div>
-                <div class="style-img main">
-                    <div class="name">
+                <div class="style-imgs-back absolute parallax" data-amount="-20">
+                    <div class="scale-up"></div>
+                </div>
+                <div class="style-img main show addactive">
+                    <div class="style-img-name">
                        <%-  include('./../parts/_title05') %>
                     </div>
                     <picture>
@@ -315,19 +319,19 @@
                         <img src="./assets/img/st_05_main_1.jpg" width="960" height="1440" alt="" />
                       </picture>
                 </div>
-                <div class="style-img img1">
+                <div class="style-img img1 show addactive">
                     <picture>
                         <source srcset="./assets/img/st_05_sub_1.webp" type="image/webp" />
                         <img src="./assets/img/st_05_sub_1.jpg" width="960" height="1440" alt="" />
                       </picture>
                 </div>
-                <div class="style-img medium img2">
+                <div class="style-img medium img2 show addactive">
                     <picture>
                         <source srcset="./assets/img/st_05_sub_2.webp" type="image/webp" />
                         <img src="./assets/img/st_05_sub_2.jpg" width="960" height="1440" alt="" />
                       </picture>
                 </div>
-                <div class="style-img img3">
+                <div class="style-img img3 show addactive">
                     <picture>
                         <source srcset="./assets/img/st_05_sub_3.webp" type="image/webp" />
                         <img src="./assets/img/st_05_sub_3.jpg" width="960" height="1440" alt="" />
@@ -343,21 +347,22 @@
                     %>
                 </div>
             </div>
-            <%-  include('./../parts/_product', {index: '05', name: 'BLOUSE', price: '¥00,000', color: ['#000000', '#ffffff', '#6c6c97,#ffffff'], path: 'st_05_item', link: ''}) %>
+            <%-  include('./../parts/_product', {index: '05', name: 'BLOUSE', price: '¥00,000', color: ['#000000', '#d7d0c2', '#a7b7d2'], path: 'st_05_item', link: ''}) %>
         </div>
     </section>
     <section id="style06" class="section style">
         <div class="section__inner">
-            <h2 class="section-title absolute">
+            <h2 class="section-title absolute ff addactive">
                 <span>BLOUSE</span>
                 <span>Style</span>
                 <span>06</span>
             </h2>
             <div class="style-imgs">
-                <div class="style-imgs-back absolute">
-                    </div>
-                <div class="style-img main">
-                    <div class="name">
+                <div class="style-imgs-back absolute parallax" data-amount="-20">
+                    <div class="scale-up"></div>
+                </div>
+                <div class="style-img main show addactive">
+                    <div class="style-img-name">
                        <%-  include('./../parts/_title06') %>
                     </div>
                     <picture>
@@ -365,19 +370,19 @@
                         <img src="./assets/img/st_06_main_1.jpg" width="960" height="1440" alt="" />
                       </picture>
                 </div>
-                <div class="style-img img1">
+                <div class="style-img img1 show addactive">
                     <picture>
                         <source srcset="./assets/img/st_06_sub_1.webp" type="image/webp" />
                         <img src="./assets/img/st_06_sub_1.jpg" width="960" height="1440" alt="" />
                       </picture>
                 </div>
-                <div class="style-img medium img2">
+                <div class="style-img medium img2 show addactive">
                     <picture>
                         <source srcset="./assets/img/st_06_sub_2.webp" type="image/webp" />
                         <img src="./assets/img/st_06_sub_2.jpg" width="960" height="1440" alt="" />
                       </picture>
                 </div>
-                <div class="style-img img3">
+                <div class="style-img img3 show addactive">
                     <picture>
                         <source srcset="./assets/img/st_06_sub_3.webp" type="image/webp" />
                         <img src="./assets/img/st_06_sub_3.jpg" width="960" height="1440" alt="" />
@@ -393,18 +398,18 @@
                     %>
                 </div>
             </div>
-            <%-  include('./../parts/_product', {index: '06', name: 'BLOUSE', price: '¥00,000', color: ['#000000', '#ffffff', '#6c6c97,#ffffff'], path: 'st_06_item', link: ''}) %>
+            <%-  include('./../parts/_product', {index: '06', name: 'BLOUSE', price: '¥00,000', color: ['#000000', '#4e4948,#ffffff', '#899bac'], path: 'st_06_item', link: ''}) %>
         </div>
     </section>
     <section id="credit" class="section">
         <div class="section__inner">
-            <div class="img absolute">
+            <div class="img absolute show addactive">
                     <picture>
                         <source srcset="./assets/img/footer_img.webp" width="960" height="1440" type="image/webp" />
                         <img loading="lazy" src="./assets/img/footer_img.jpg" width="960" height="1440" alt="" />
                     </picture>
                 </div>
-            <p class="absolute">
+            <p class="absolute show addactive">
                 PHOTOGRAPHER：Sakai De Jun<br/>
                 HAIR&MAKE：Kyoka Susa<br/>
                 MODEL：Sophie Patrece (Bon Image)

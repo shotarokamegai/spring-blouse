@@ -1,43 +1,56 @@
 <div class="product flex flex-sp align-end justify-center">
-  <div class="product-img">
+  <div class="product-img show addactive">
     <picture>
         <source srcset="./assets/img/<%- path %>.webp" type="image/webp" />
         <img src="./assets/img/<%- path %>.jpg" width="960" height="960" alt="<%- name %>" />
       </picture>
   </div>
   <div class="product-content">
-    <p class="product-name flex flex-sp flex-start ff">
+    <p class="product-name flex flex-sp flex-start ff show addactive">
       <span class="index">
       <%- index %>
       </span>
       <%- name %>
     </p>
-    <p class="product-price aktiv">
+    <p class="product-price aktiv show addactive">
       <%- price %>
     </p>
-    <div class="color-wrapper flex flex-sp">
+    <div class="color-wrapper flex flex-sp show addactive">
       <%
         for (var i = 0; i < color.length; i++) {
+          var thisColor = color[i];
           var border = 'transparent';
-          if (color[i] === '#ffffff') {
+          if (thisColor === '#ffffff') {
             border = '#DDDDDD';
           }
+          if (thisColor.match(/,/)) {
+            let colors = thisColor.split(',');
+            for (var j = 0; j < colors.length; j++) {
+              %>
+        <div class="color" style="background:repeating-linear-gradient(90deg, <%- colors[0] %> 0, <%- colors[0] %> 1%, <%- colors[1] %> 1%, <%- colors[1] %> 2%);"></div>
+              
+              <%
+            }
+          } else {
       %>
-        <div class="color" style="border: 1px solid <%- border %>; background-color: <%- color[i] %>"></div>
+        <div class="color" style="border: 1px solid <%- border %>; background-color: <%- thisColor %>"></div>
       <%
+          }
         }
       %>
     </div>
-    <a
-      href="<%- link %>"
-      target="_blank"
-      rel="noopener"
-      class="btn big"
-    >
-      <span class="btn__content">
-          <span>CHECK</span>
-          <span>CHECK</span>
-      </span>
-    </a>
+    <div class=" show addactive">
+      <a
+        href="<%- link %>"
+        target="_blank"
+        rel="noopener"
+        class="btn big"
+      >
+        <span class="btn__content">
+            <span>CHECK</span>
+            <span>CHECK</span>
+        </span>
+      </a>
+    </div>
   </div>
 </div>

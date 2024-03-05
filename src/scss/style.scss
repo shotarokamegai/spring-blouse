@@ -71,9 +71,26 @@ body {
 }
 
 @media screen and (min-width: 750px) {
+  .loaded {
+    main .section#top {
+      .wrapper .box:nth-child(1) .logo {
+        opacity: 1;
+      }
+      .wrapper .box-img picture {
+        opacity: 1;
+        transform: scale(1);
+      }
+      .title h2 {
+        opacity: 1;
+      }
+      .title .bar div {
+        transform: translate3d(0, 0, 0) !important;
+      }
+    }
+  }
   #footer {
     position: relative;
-    padding: rem(80) 0 rem(20);
+    padding: vwPc(80) 0 vwPc(20);
     background-color: #F2F2F2;
     nav {
       margin-bottom: 6.060606060606061%;
@@ -83,10 +100,10 @@ body {
           color: $text;
         }
         &.menu {
-          margin-bottom: rem(48);
+          margin-bottom: vwPc(48);
           li {
-            margin-right: rem(36);
-            @include fontsize(16);
+            margin-right: vwPc(36);
+            @include fontvwPc(16);
             font-family: $AreaExtended;
             font-weight: bold;
             &:last-child {
@@ -96,11 +113,11 @@ body {
         }
         &.sns {
           li {
-            margin-right: rem(24);
+            margin-right: vwPc(24);
             a {
               @include fitcenter();
-              height: rem(60);
-              width: rem(60);
+              height: vwPc(60);
+              width: vwPc(60);
               border-radius: 100%;
               background-color: $text;
               will-change: opacity;
@@ -114,7 +131,7 @@ body {
                 // }
               }
               i {
-                @include fontsize(30);
+                @include fontvwPc(30);
                 color: $white;
                 transition: color 0.3s ease-in-out;
               }
@@ -128,17 +145,17 @@ body {
     }
     h1.logo {
       margin: 0 auto 6.060606060606061%;
-      width: rem(321.86);
+      width: vwPc(321.86);
     }
     .copy {
-      @include fontsize(12);
+      @include fontvwPc(12);
       text-align: center;
       font-family: $Acumin;
     }
   }
   .show {
     opacity: 0;
-    transform: translate3d(0, rem(100), 0) scale(0.95);
+    transform: translate3d(0, vwPc(50), 0);
     will-change: opacity, transform;
     transition: transform $slow 2s, opacity $slow 2s;
     &.active {
@@ -147,28 +164,69 @@ body {
       transform: translate3d(0, 0, 0) scale(1);
     }
   }
-  .vertical {
+  .scroll-trigger {
+    cursor: pointer;
+  }
+  #vertical {
     position: fixed;
     top: 0;
     left: vwPc(625);
-    height: 100%;
+    // height: 100%;
+    height: 0;
     width: vwPc(4);
     background-color: $accent_1;
+    will-change: height;
+    transition: height $zoom 1s;
+    &.active {
+      height: 100vh;
+    }
   }
   main {
+    position: relative;
     .style-imgs {
       position: relative;
       &-back {
         z-index: 0;
+        overflow: hidden;
+        div {
+          position: relative;
+          height: 100%;
+          width: 100%;
+        }
       }
     }
     .style-img {
       position: relative;
       width: vwPc(303);
-      .name {
+      &.active {
+        .style-img-name {
+          svg path {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+      }
+      &-name {
         position: absolute;
         svg {
+          position: relative;
+          display: block;
           width: 100%;
+          path {
+            position: relative;
+            display: inline-block;
+            // opacity: 0;
+            transform: scale(0);
+            transform-origin: center;
+            transform-box: fill-box;
+            will-change: transform;
+            // will-change: opacity, transform;
+            @for $i from 1 through 20 {
+              &:nth-child(#{$i}) {
+                transition: transform $zoom 1s #{($i - 1) * .1}s, opacity $zoom 1s #{($i - 1) * .1}s;
+              }
+            }
+          }
         }
       }
       &.main {
@@ -208,6 +266,7 @@ body {
       border-radius: 100%;
     }
     .btn {
+      position: relative;
       display: inline-block;
       height: vwPc(24);
       line-height: vwPc(22);
@@ -282,6 +341,7 @@ body {
       &-text {
         @include fontvwPc(16); 
         line-height: (32 / 16);
+        text-align: center;
       }
       &__inner {
         position: relative;
@@ -298,21 +358,33 @@ body {
           h2 {
             @include center();
             width: vwPc(292.35);
+            opacity: 0;
+            will-change: opacity;
+            transition: opacity $ziwaziwa 1s 1s;
           }
           .bar {
             position: absolute;
             height: vwPc(202.5);
             width: vwPc(30);
+            overflow: hidden;
             div {
               height: 100%;
               width: 100%;
               background-color: $accent_1;
+              will-change: transform;
+              transition: transform $zoom 1s .5s;
             }
             &.bar1 {
               top: 0;
+              div {
+                transform: translate3d(0, -100%, 0);
+              }
             }
             &.bar2 {
               bottom: 0;
+              div {
+                transform: translate3d(0, 100%, 0);
+              }
             }
           }
         }
@@ -321,14 +393,23 @@ body {
           .box {
             position: relative;
             height: 100%;
+            overflow: hidden;
             &-img {
               @include center();
               height: 100%;
               width: 100%;
               object-fit: cover;
               opacity: 0;
+              overflow: hidden;
               &.active {
                 opacity: 1;
+              }
+              picture {
+                position: relative;
+                display: block;
+                opacity: 0;
+                transform: scale(1.1);
+                will-change: opacity, transform;
               }
               img, picture {
                 height: 100%;
@@ -337,17 +418,30 @@ body {
             }
             &:nth-child(1) {
               width: vwPc(480);
+              .box-img picture {
+                transition: transform $slow 2s, opacity $slow 2s;
+              }
               .logo {
                 position: absolute;
                 top: vwPc(181.5);
                 left: 50%;
                 width: vwPc(211.22);
                 transform: translate3d(-50%, 0, 0);
+                opacity: 0;
+                will-change: opacity;
+                transition: opacity $ziwaziwa 1s .5s;
                 z-index: 1;
               }
             }
             &:nth-child(2) {
               width: vwPc(960);
+              .box-img picture {
+                transition: transform $slow 2s .2s, opacity $slow 2s .2s;
+              }
+              .box-img {
+                will-change: opacity;
+                transition: opacity $slow 2s;
+              }
             }
           }
         }
@@ -363,6 +457,26 @@ body {
             position: relative;
             margin-right: vwPc(32);
             width: vwPc(160);
+            opacity: 0;
+            transform: translate3d(0, vwPc(50), 0);
+            will-change: opacity, transform;
+            @for $i from 1 through 6 {
+              &:nth-child(#{$i}) {
+                transition: transform $slow 2s #{($i - 1) * .1}s, opacity $slow 2s #{($i - 1) * .1}s;
+              }
+            }
+            &.active {
+              opacity: 1;
+              transform: translate3d(0, 0, 0) scale(1);
+            }
+            &:hover {
+              .box-img {
+                img {
+                  opacity: .5;
+                  transform: translate3d(-50%, -50%, 0) scale(1.05);
+                }
+              }
+            }
             &:last-child {
               margin-right: 0;
             }
@@ -384,11 +498,14 @@ body {
             }
             &-img {
               position: relative;
+              overflow: hidden;
               img {
                 @include center();
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
+                will-change: opacity, transform;
+                transition: transform $slow 2s, opacity $slow 2s;
               }
               &::before {
                 content: '';
@@ -406,8 +523,21 @@ body {
         .section-title {
           display: inline-block;
           color: $accent_1;
+          &.active {
+            span {
+              opacity: 1;
+              transform: translate3d(0, 0, 0);
+            }
+          }
           span {
             display: block;
+            opacity: 0;
+            transform: translate3d(0, vwPc(50), 0);
+            @for $i from 1 through 3 {
+              &:nth-child(#{$i}) {
+                transition: transform $slow 1s #{($i - 1) * .1}s, opacity $slow 1s #{($i - 1) * .1}s;
+              }
+            }
             &:nth-child(1) {
               @include fontvwPc(24);
               font-weight: 300;  
@@ -434,6 +564,8 @@ body {
             font-weight: 300;
             color: $accent_1;
             .index {
+              position: relative;
+              top: 0.2vw;
               margin-right: vwPc(8);
               @include fontvwPc(16);
               font-weight: 700; 
@@ -460,16 +592,18 @@ body {
             width: vwPc(1267);
             top: vwPc(380);
             left: 0;
-            background-color: #DDDBEB;
+            div {
+              background-color: #DDDBEB;
+            }
           }
           .style-img {
+            &-name {
+              top: vwPc(56);
+              right: vwPc(25);
+              width: vwPc(145.53);
+            }
             &.main {
               margin-left: vwPc(512);
-              .name {
-                top: vwPc(56);
-                right: vwPc(25);
-                width: vwPc(145.53);
-              }
             }
             &.img1 {
               margin-top: vwPc(-160);
@@ -504,16 +638,18 @@ body {
             width: vwPc(1094);
             bottom: 0;
             right: vwPc(60);
-            background-color: $bg1;
+            div {
+              background-color: $bg1;
+            }
           }
           .style-img {
+            &-name {
+              top: vwPc(-37);
+              right: vwPc(-20);
+              width: vwPc(219.44);
+            }
             &.main {
               margin-left: vwPc(60);
-              .name {
-                top: vwPc(-37);
-                right: vwPc(-20);
-                width: vwPc(219.44);
-              }
             }
             &.img1 {
               margin-top: vwPc(-534);
@@ -551,20 +687,27 @@ body {
             left: 50%;
             transform: translate3d(-50%, 0, 0);
             picture, img {
+              position: relative;
               height: 100%;
               width: 100%;
               object-fit: cover;
             }
+            picture {
+              display: block;
+              top: -5%;
+              height: 110%;
+              width: auto;
+            }
           }
           .style-img {
+            &-name {
+              top: vwPc(-63);
+              left: vwPc(29);
+              width: vwPc(184.38);
+            }
             &.main {
               margin-left: auto;
               margin-right: vwPc(60);
-              .name {
-                top: vwPc(-63);
-                left: vwPc(29);
-                width: vwPc(184.38);
-              }
             }
             &.img1 {
               margin-top: vwPc(-359);
@@ -598,13 +741,13 @@ body {
             justify-content: flex-start;
           }
           .style-img {
+            &-name {
+              top: vwPc(-40);
+              left: vwPc(-36.5);
+              width: vwPc(73);
+            }
             &.main {
               margin-left: vwPc(173);
-              .name {
-                top: vwPc(-40);
-                left: vwPc(-36.5);
-                width: vwPc(73);
-              }
             }
             &.img1 {
               margin-top: vwPc(-240);
@@ -639,13 +782,13 @@ body {
             justify-content: flex-start;
           }
           .style-img {
+            &-name {
+              top: vwPc(190);
+              right: vwPc(-115);
+              width: vwPc(177.74);
+            }
             &.main {
               margin-left: vwPc(400);
-              .name {
-                top: vwPc(190);
-                right: vwPc(-115);
-                width: vwPc(177.74);
-              }
             }
             &.img1 {
               margin-top: vwPc(-113);
@@ -674,7 +817,9 @@ body {
             width: vwPc(928);
             top: vwPc(630);
             left: 0;
-            background-color: $bg1;
+            div {
+              background-color: $bg1;
+            }
           }
           .section-title {
             top: 0;
@@ -686,13 +831,13 @@ body {
             justify-content: flex-start;
           }
           .style-img {
+            &-name {
+              top: vwPc(-47);
+              left: vwPc(14);
+              width: vwPc(282.4);
+            }
             &.main {
               margin-left: vwPc(60);
-              .name {
-                top: vwPc(-47);
-                left: vwPc(14);
-                width: vwPc(282.4);
-              }
             }
             &.img1 {
               margin-top: vwPc(-494);
