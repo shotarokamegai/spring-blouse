@@ -656,6 +656,7 @@ body .hidden {
     transform: translate3d(0, 0, 0) !important;
   }
   #footer {
+    position: relative;
     padding: 12.213740458vw 0 5.0890585242vw;
     background-color: #F2F2F2;
   }
