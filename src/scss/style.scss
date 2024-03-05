@@ -232,7 +232,7 @@ body {
         z-index: 2;
       }
       &:active picture img {
-        opacity: .5;
+        // opacity: .5;
         transform: translate3d(0, 0, 0) scale(1.05);
       }
       &.active {
@@ -666,7 +666,7 @@ body {
               }
             }
             &:active picture img {
-              opacity: .5;
+              // opacity: .5;
               transform: translate3d(0, 0, 0) scale(1.05);
             }
           }
@@ -1194,7 +1194,7 @@ body {
         z-index: 2;
       }
       &:hover picture img {
-        opacity: .5;
+        // opacity: .5;
         transform: translate3d(0, 0, 0) scale(1.05);
       }
       &.active {
@@ -1591,7 +1591,7 @@ body {
             width: vwPc(416);
             &__inner {
               overflow: hidden;
-              transform: translate3d(0, vw(50), 0);
+              transform: translate3d(0, vwPc(50), 0);
               will-change: transform;
               transition: transform $slow 2s;
               overflow: hidden;
@@ -1635,7 +1635,7 @@ body {
               }
             }
             &:hover picture img {
-              opacity: .5;
+              // opacity: .5;
               transform: translate3d(0, 0, 0) scale(1.05);
             }
           }
@@ -2148,7 +2148,7 @@ body {
           z-index: 2;
         }
         &:hover picture img {
-          opacity: .5;
+          // opacity: .5;
           transform: translate3d(0, 0, 0) scale(1.05);
         }
         &.active {
@@ -2547,7 +2547,7 @@ body {
               width: rem(416);
               &__inner {
                 overflow: hidden;
-                transform: translate3d(0, vw(50), 0);
+                transform: translate3d(0, rem(50), 0);
                 will-change: transform;
                 transition: transform $slow 2s;
                 overflow: hidden;
@@ -2591,7 +2591,7 @@ body {
                 }
               }
               &:hover picture img {
-                opacity: .5;
+                // opacity: .5;
                 transform: translate3d(0, 0, 0) scale(1.05);
               }
             }

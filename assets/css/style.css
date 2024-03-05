@@ -801,7 +801,6 @@ body .hidden {
     z-index: 2;
   }
   main .style-img:active picture img {
-    opacity: 0.5;
     transform: translate3d(0, 0, 0) scale(1.05);
   }
   main .style-img.active .style-img__inner {
@@ -1297,7 +1296,6 @@ body .hidden {
     opacity: 1;
   }
   main .section.style .product-img:active picture img {
-    opacity: 0.5;
     transform: translate3d(0, 0, 0) scale(1.05);
   }
   main .section.style .product-name {
@@ -1815,7 +1813,6 @@ body .hidden {
     z-index: 2;
   }
   main .style-img:hover picture img {
-    opacity: 0.5;
     transform: translate3d(0, 0, 0) scale(1.05);
   }
   main .style-img.active .style-img__inner {
@@ -2276,7 +2273,7 @@ body .hidden {
   }
   main .section.style .product-img__inner {
     overflow: hidden;
-    transform: translate3d(0, 12.7226463104vw, 0);
+    transform: translate3d(0, 3.4722222222vw, 0);
     will-change: transform;
     transition: transform cubic-bezier(0.19, 1, 0.22, 1) 2s;
     overflow: hidden;
@@ -2324,7 +2321,6 @@ body .hidden {
     opacity: 1;
   }
   main .section.style .product-img:hover picture img {
-    opacity: 0.5;
     transform: translate3d(0, 0, 0) scale(1.05);
   }
   main .section.style .product-name {
@@ -2828,7 +2824,6 @@ body .hidden {
     z-index: 2;
   }
   main .style-img:hover picture img {
-    opacity: 0.5;
     transform: translate3d(0, 0, 0) scale(1.05);
   }
   main .style-img.active .style-img__inner {
@@ -3291,7 +3286,7 @@ body .hidden {
   }
   main .section.style .product-img__inner {
     overflow: hidden;
-    transform: translate3d(0, 12.7226463104vw, 0);
+    transform: translate3d(0, 5rem, 0);
     will-change: transform;
     transition: transform cubic-bezier(0.19, 1, 0.22, 1) 2s;
     overflow: hidden;
@@ -3339,7 +3334,6 @@ body .hidden {
     opacity: 1;
   }
   main .section.style .product-img:hover picture img {
-    opacity: 0.5;
     transform: translate3d(0, 0, 0) scale(1.05);
   }
   main .section.style .product-name {
