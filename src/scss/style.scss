@@ -54,6 +54,12 @@ body {
 .ff {
   font-family: $Ff;
 }
+.ffcomp {
+  font-family: $FfComp;
+  &.light {
+    font-weight: 300;
+  }
+}
 .fot {
   font-family: $Fot;
 }
@@ -198,6 +204,30 @@ body {
     .style-img {
       position: relative;
       width: vwPc(303);
+      overflow: hidden;
+      picture img {
+        position: relative;
+        will-change: opacity, transform;
+        transition: transform $slow 2s, opacity $slow 2s;
+      }
+      a {
+        @include center();
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+      }
+      &:hover picture img {
+        opacity: .5;
+        transform: translate3d(0, 0, 0) scale(1.05);
+      }
+      &::before {
+        content: '';
+        @include center();
+        height: 100%;
+        width: 100%;
+        background-color: $white;
+        z-index: 1;
+      }
       &.active {
         .style-img-name {
           svg path {
@@ -208,6 +238,7 @@ body {
       }
       &-name {
         position: absolute;
+        z-index: 2;
         svg {
           position: relative;
           display: block;
@@ -228,6 +259,10 @@ body {
             }
           }
         }
+      }
+      picture {
+        position: relative;
+        z-index: 1;
       }
       &.main {
         width: vwPc(642);
@@ -350,6 +385,7 @@ body {
       }
       &#top {
         height: vwPc(810);
+        background-color: $white;
         .title {
           position: absolute;
           height: 100%;
@@ -383,7 +419,8 @@ body {
             &.bar2 {
               bottom: 0;
               div {
-                transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, -100%, 0);
+                // transform: translate3d(0, 100%, 0);
               }
             }
           }
@@ -440,7 +477,7 @@ body {
               }
               .box-img {
                 will-change: opacity;
-                transition: opacity $slow 2s;
+                transition: opacity $ziwaziwa 2s;
               }
             }
           }
@@ -491,6 +528,9 @@ body {
               font-weight: 400;
               color: $accent_1;
               z-index: 1;
+              .ffcomp {
+                letter-spacing: .5vw;
+              }
               .num {
                 margin-top: vwPc(16);
                 @include fontvwPc(36);
@@ -541,11 +581,14 @@ body {
             &:nth-child(1) {
               @include fontvwPc(24);
               font-weight: 300;  
+              letter-spacing: 0.15vw;
             }
             &:nth-child(2) {
               @include fontvwPc(64);
+              letter-spacing: .45vw;
             }
             &:nth-child(3) {
+              margin-top: vwPc(-10);
               margin-left: vwPc(68);
               @include fontvwPc(80);
               font-weight: 400;  
@@ -555,8 +598,36 @@ body {
         .product {
           position: relative;
           &-img {
+            position: relative;
             margin-right: vwPc(36);
             width: vwPc(416);
+            overflow: hidden;
+            a {
+              @include center();
+              height: 100%;
+              width: 100%;
+              z-index: 2;
+            }
+            picture {
+              position: relative;
+              z-index: 1;
+              img {
+                position: relative;
+                will-change: opacity, transform;
+                transition: transform $slow 2s, opacity $slow 2s;
+              }
+            }
+            &:hover picture img {
+              opacity: .5;
+              transform: translate3d(0, 0, 0) scale(1.05);
+            }
+            &::before {
+              content: '';
+              @include center();
+              height: 100%;
+              width: 100%;
+              background-color: $white;
+            }
           }
           &-name {
             margin-bottom: vwPc(24);
@@ -569,6 +640,10 @@ body {
               margin-right: vwPc(8);
               @include fontvwPc(16);
               font-weight: 700; 
+              letter-spacing: .1vw;
+            }
+            .ffcomp {
+              letter-spacing: .45vw;
             }
           }
           &-price {
@@ -694,9 +769,13 @@ body {
             }
             picture {
               display: block;
-              top: -5%;
-              height: 110%;
+              top: -10%;
+              height: 120%;
+              height: 120%;
               width: auto;
+            }
+            img {
+              max-width: initial;
             }
           }
           .style-img {
@@ -870,6 +949,17 @@ body {
           left: vwPc(400);
           width: vwPc(643);
           z-index: 1;
+          picture {
+            position: relative;
+            z-index: 1;
+          }
+          &::before {
+            content: '';
+            @include center();
+            height: 100%;
+            width: 100%;
+            background-color: $white;
+          }
         }
         p {
           right: vwPc(500);

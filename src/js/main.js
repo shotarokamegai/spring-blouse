@@ -299,7 +299,7 @@ class main {
     window.scrollTo(0, 0);
     document.body.classList.add('loaded');
     setTimeout(() => {
-      this.interval = setInterval(this.gifAnim.bind(this), 1500);
+      this.interval = setInterval(this.gifAnim.bind(this), 2500);
     }, 1000);
   }
 

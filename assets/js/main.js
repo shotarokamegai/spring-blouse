@@ -434,7 +434,7 @@ var main = /*#__PURE__*/function () {
       window.scrollTo(0, 0);
       document.body.classList.add('loaded');
       setTimeout(function () {
-        _this4.interval = setInterval(_this4.gifAnim.bind(_this4), 1500);
+        _this4.interval = setInterval(_this4.gifAnim.bind(_this4), 2500);
       }, 1000);
     }
   }, {
