@@ -44,9 +44,6 @@ body {
   &.visited {
     opacity: 1;
   }
-  picture {
-    display: block;
-  }
   .hidden {
     visibility: hidden;
   }
@@ -207,15 +204,26 @@ body {
     .style-img {
       position: relative;
       width: vw(170);
-      overflow: hidden;
+      &__inner {
+        position: relative;
+        overflow: hidden;
+        transform: translate3d(0, vw(50), 0);
+        will-change: transform;
+        transition: transform $slow 2s;
+        z-index: 1;
+        &::before {
+          content: '';
+          @include center();
+          height: 100%;
+          width: 100%;
+          background-color: $white;
+          z-index: 1;
+        }
+      }
       picture img {
         position: relative;
         will-change: opacity, transform;
         transition: transform $slow 2s, opacity $slow 2s;
-      }
-      picture {
-        position: relative;
-        z-index: 1;
       }
       a {
         @include center();
@@ -227,21 +235,27 @@ body {
         opacity: .5;
         transform: translate3d(0, 0, 0) scale(1.05);
       }
-      &::before {
-        content: '';
-        @include center();
-        height: 100%;
-        width: 100%;
-        background-color: $white;
-        z-index: 1;
-      }
       &.active {
+        .style-img__inner {
+          transform: translate3d(0, 0, 0);
+          picture {
+            opacity: 1;
+          }
+        }
         .style-img-name {
           svg path {
             opacity: 1;
             transform: scale(1);
           }
         }
+      }
+      picture {
+        position: relative;
+        opacity: 0;
+        display: block;
+        will-change: opacity;
+        transition: opacity $slow 2s;
+        z-index: 2;
       }
       &-name {
         position: absolute;
@@ -268,18 +282,9 @@ body {
           }
         }
       }
-      picture {
-        position: relative;
-        z-index: 2;
-      }
       &.main {
         width: vw(290);
         overflow: visible;
-        .main__inner {
-          position: relative;
-          overflow: hidden;
-          z-index: 1;
-        }
       }
       &.medium {
         width: vw(230);
@@ -1140,7 +1145,22 @@ body {
     .style-img {
       position: relative;
       width: vwPc(303);
-      overflow: hidden;
+      &__inner {
+        position: relative;
+        overflow: hidden;
+        transform: translate3d(0, vwPc(50), 0);
+        will-change: transform;
+        transition: transform $slow 2s;
+        z-index: 1;
+        &::before {
+          content: '';
+          @include center();
+          height: 100%;
+          width: 100%;
+          background-color: $white;
+          z-index: 1;
+        }
+      }
       picture img {
         position: relative;
         will-change: opacity, transform;
@@ -1156,21 +1176,27 @@ body {
         opacity: .5;
         transform: translate3d(0, 0, 0) scale(1.05);
       }
-      &::before {
-        content: '';
-        @include center();
-        height: 100%;
-        width: 100%;
-        background-color: $white;
-        z-index: 1;
-      }
       &.active {
+        .style-img__inner {
+          transform: translate3d(0, 0, 0);
+          picture {
+            opacity: 1;
+          }
+        }
         .style-img-name {
           svg path {
             opacity: 1;
             transform: scale(1);
           }
         }
+      }
+      picture {
+        position: relative;
+        opacity: 0;
+        display: block;
+        will-change: opacity;
+        transition: opacity $slow 2s;
+        z-index: 2;
       }
       &-name {
         position: absolute;
@@ -2051,7 +2077,22 @@ body {
       .style-img {
         position: relative;
         width: rem(303);
-        overflow: hidden;
+        &__inner {
+          position: relative;
+          overflow: hidden;
+          transform: translate3d(0, rem(50), 0);
+          will-change: transform;
+          transition: transform $slow 2s;
+          z-index: 1;
+          &::before {
+            content: '';
+            @include center();
+            height: 100%;
+            width: 100%;
+            background-color: $white;
+            z-index: 1;
+          }
+        }
         picture img {
           position: relative;
           will-change: opacity, transform;
@@ -2067,21 +2108,27 @@ body {
           opacity: .5;
           transform: translate3d(0, 0, 0) scale(1.05);
         }
-        &::before {
-          content: '';
-          @include center();
-          height: 100%;
-          width: 100%;
-          background-color: $white;
-          z-index: 1;
-        }
         &.active {
+          .style-img__inner {
+            transform: translate3d(0, 0, 0);
+            picture {
+              opacity: 1;
+            }
+          }
           .style-img-name {
             svg path {
               opacity: 1;
               transform: scale(1);
             }
           }
+        }
+        picture {
+          position: relative;
+          opacity: 0;
+          display: block;
+          will-change: opacity;
+          transition: opacity $slow 2s;
+          z-index: 2;
         }
         &-name {
           position: absolute;

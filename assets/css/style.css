@@ -606,9 +606,6 @@ body ::selection {
 body.loaded, body.visited {
   opacity: 1;
 }
-body picture {
-  display: block;
-}
 body .hidden {
   visibility: hidden;
 }
@@ -769,16 +766,30 @@ body .hidden {
   main .style-img {
     position: relative;
     width: 43.2569974555vw;
+  }
+  main .style-img__inner {
+    position: relative;
     overflow: hidden;
+    transform: translate3d(0, 12.7226463104vw, 0);
+    will-change: transform;
+    transition: transform cubic-bezier(0.19, 1, 0.22, 1) 2s;
+    z-index: 1;
+  }
+  main .style-img__inner::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(1) rotate(0);
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1;
   }
   main .style-img picture img {
     position: relative;
     will-change: opacity, transform;
     transition: transform cubic-bezier(0.19, 1, 0.22, 1) 2s, opacity cubic-bezier(0.19, 1, 0.22, 1) 2s;
-  }
-  main .style-img picture {
-    position: relative;
-    z-index: 1;
   }
   main .style-img a {
     position: absolute;
@@ -793,20 +804,23 @@ body .hidden {
     opacity: 0.5;
     transform: translate3d(0, 0, 0) scale(1.05);
   }
-  main .style-img::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%) scale(1) rotate(0);
-    height: 100%;
-    width: 100%;
-    background-color: #ffffff;
-    z-index: 1;
+  main .style-img.active .style-img__inner {
+    transform: translate3d(0, 0, 0);
+  }
+  main .style-img.active .style-img__inner picture {
+    opacity: 1;
   }
   main .style-img.active .style-img-name svg path {
     opacity: 1;
     transform: scale(1);
+  }
+  main .style-img picture {
+    position: relative;
+    opacity: 0;
+    display: block;
+    will-change: opacity;
+    transition: opacity cubic-bezier(0.19, 1, 0.22, 1) 2s;
+    z-index: 2;
   }
   main .style-img-name {
     position: absolute;
@@ -886,18 +900,9 @@ body .hidden {
   main .style-img-name svg path:nth-child(20) {
     transition: transform cubic-bezier(0.65, 0.05, 0.36, 1) 1s 1.9s, opacity cubic-bezier(0.65, 0.05, 0.36, 1) 1s 1.9s;
   }
-  main .style-img picture {
-    position: relative;
-    z-index: 2;
-  }
   main .style-img.main {
     width: 73.7913486005vw;
     overflow: visible;
-  }
-  main .style-img.main .main__inner {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
   }
   main .style-img.medium {
     width: 58.524173028vw;
@@ -1756,7 +1761,25 @@ body .hidden {
   main .style-img {
     position: relative;
     width: 21.0416666667vw;
+  }
+  main .style-img__inner {
+    position: relative;
     overflow: hidden;
+    transform: translate3d(0, 3.4722222222vw, 0);
+    will-change: transform;
+    transition: transform cubic-bezier(0.19, 1, 0.22, 1) 2s;
+    z-index: 1;
+  }
+  main .style-img__inner::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(1) rotate(0);
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1;
   }
   main .style-img picture img {
     position: relative;
@@ -1776,20 +1799,23 @@ body .hidden {
     opacity: 0.5;
     transform: translate3d(0, 0, 0) scale(1.05);
   }
-  main .style-img::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%) scale(1) rotate(0);
-    height: 100%;
-    width: 100%;
-    background-color: #ffffff;
-    z-index: 1;
+  main .style-img.active .style-img__inner {
+    transform: translate3d(0, 0, 0);
+  }
+  main .style-img.active .style-img__inner picture {
+    opacity: 1;
   }
   main .style-img.active .style-img-name svg path {
     opacity: 1;
     transform: scale(1);
+  }
+  main .style-img picture {
+    position: relative;
+    opacity: 0;
+    display: block;
+    will-change: opacity;
+    transition: opacity cubic-bezier(0.19, 1, 0.22, 1) 2s;
+    z-index: 2;
   }
   main .style-img-name {
     position: absolute;
@@ -2728,7 +2754,25 @@ body .hidden {
   main .style-img {
     position: relative;
     width: 30.3rem;
+  }
+  main .style-img__inner {
+    position: relative;
     overflow: hidden;
+    transform: translate3d(0, 5rem, 0);
+    will-change: transform;
+    transition: transform cubic-bezier(0.19, 1, 0.22, 1) 2s;
+    z-index: 1;
+  }
+  main .style-img__inner::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(1) rotate(0);
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1;
   }
   main .style-img picture img {
     position: relative;
@@ -2748,20 +2792,23 @@ body .hidden {
     opacity: 0.5;
     transform: translate3d(0, 0, 0) scale(1.05);
   }
-  main .style-img::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%) scale(1) rotate(0);
-    height: 100%;
-    width: 100%;
-    background-color: #ffffff;
-    z-index: 1;
+  main .style-img.active .style-img__inner {
+    transform: translate3d(0, 0, 0);
+  }
+  main .style-img.active .style-img__inner picture {
+    opacity: 1;
   }
   main .style-img.active .style-img-name svg path {
     opacity: 1;
     transform: scale(1);
+  }
+  main .style-img picture {
+    position: relative;
+    opacity: 0;
+    display: block;
+    will-change: opacity;
+    transition: opacity cubic-bezier(0.19, 1, 0.22, 1) 2s;
+    z-index: 2;
   }
   main .style-img-name {
     position: absolute;
