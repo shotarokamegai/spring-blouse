@@ -192,6 +192,7 @@ body {
   }
   main {
     position: relative;
+    overflow: hidden;
     .style-imgs {
       position: relative;
       &-back {
@@ -394,6 +395,19 @@ body {
         font-family: $Aktiv;
       }
     }
+    .swiper-container {
+      transition: opacity $slow 2s .2s;
+      width: vw(727.78125);
+      width: 185.1860687023vw !important;
+      .swiper-wrapper {
+        transition-timing-function: linear;
+        .swiper-slide {
+          img {
+            height: vw(232.89);
+          }
+        }
+      }
+    }
     .section {
       position: relative;
       &-text {
@@ -452,18 +466,8 @@ body {
             &:nth-child(1) {
               height: vw(232.89);
               .swiper-container {
-                width: vw(727.78125);
                 opacity: 0;
                 will-change: opacity;
-                transition: opacity $slow 2s .2s;
-                .swiper-wrapper {
-                  transition-timing-function: linear;
-                  .swiper-slide {
-                    img {
-                      height: vw(232.89);
-                    }
-                  }
-                }
               }
               picture, img {
                 width: auto;
@@ -830,6 +834,9 @@ body {
             bottom: vw(-928);
             left: 50%;
             transform: translate3d(-50%, 0, 0);
+            div {
+              height: fit-content;
+            }
             picture, img {
               position: relative;
               height: 100%;
@@ -1023,7 +1030,7 @@ body {
           left: 50%;
           width: vw(350);
           transform: translate3d(-50%, 0, 0);
-          z-index: 1;
+          z-index: 2;
           picture {
             position: relative;
             z-index: 1;
@@ -1044,12 +1051,13 @@ body {
           transform: translate3d(-50%, 0, 0);
           line-height: (24 /12);
           color: $accent_1;
-          z-index: 1;
+          z-index: 2;
         }
         .back {
           height: vw(575);
+          overflow: hidden;
           picture, img {
-            height: 100%;
+            // height: 100%;
             width: 100%;
             object-fit: cover;
           }
@@ -1381,6 +1389,18 @@ body {
         font-family: $Aktiv;
       }
     }
+    .swiper-container {
+      // width: vwPc(2531.25);
+      width: 175.78125vw !important;
+      .swiper-wrapper {
+        transition-timing-function: linear;
+        .swiper-slide {
+          img {
+            height: vwPc(810);
+          }
+        }
+      }
+    }
     .section {
       position: relative;
       &-text {
@@ -1444,18 +1464,9 @@ body {
             &:nth-child(1) {
               width: vwPc(480);
               .swiper-container {
-                width: vwPc(2531.25);
                 opacity: 0;
                 will-change: opacity;
                 transition: opacity $slow 2s .2s;
-                .swiper-wrapper {
-                  transition-timing-function: linear;
-                  .swiper-slide {
-                    img {
-                      height: vwPc(810);
-                    }
-                  }
-                }
               }
               picture, img {
                 width: auto;
@@ -1814,6 +1825,9 @@ body {
             bottom: vwPc(-957);
             left: 50%;
             transform: translate3d(-50%, 0, 0);
+            div {
+              height: fit-content;
+            }
             picture, img {
               position: relative;
               height: 100%;
@@ -2001,7 +2015,7 @@ body {
           top: vwPc(-388);
           left: vwPc(400);
           width: vwPc(643);
-          z-index: 1;
+          z-index: 2;
           picture {
             position: relative;
             z-index: 1;
@@ -2015,17 +2029,25 @@ body {
           }
         }
         p {
-          right: vwPc(500);
+          padding-right: vwPc(100);
+          left: vwPc(400);
+          width: vwPc(643);
           bottom: vwPc(80);
           @include fontvwPc(12);
           line-height: (24 /12);
           color: $accent_1;
-          z-index: 1;
+          text-align: right;
+          z-index: 2;
+          span {
+            display: inline-block;
+            text-align: left;
+          }
         }
         .back {
           height: vwPc(778);
+          overflow: hidden;
           picture, img {
-            height: 100%;
+            // height: 100%;
             width: 100%;
             object-fit: cover;
           }
@@ -2357,6 +2379,20 @@ body {
           font-family: $Aktiv;
         }
       }
+      .swiper-container {
+        // @include center();
+        // width: rem(1687.5);
+        width: rem(2531.25);
+        width: 253.125rem !important;
+        .swiper-wrapper {
+          transition-timing-function: linear;
+          .swiper-slide {
+            img {
+              height: rem(810);
+            }
+          }
+        }
+      }
       .section {
         position: relative;
         &-text {
@@ -2420,20 +2456,9 @@ body {
               &:nth-child(1) {
                 width: 33.33333333333333%;
                 .swiper-container {
-                  // @include center();
-                  // width: rem(1687.5);
-                  width: rem(2531.25);
                   opacity: 0;
                   will-change: opacity;
                   transition: opacity $slow 2s .2s;
-                  .swiper-wrapper {
-                    transition-timing-function: linear;
-                    .swiper-slide {
-                      img {
-                        height: rem(810);
-                      }
-                    }
-                  }
                 }
                 .box-img picture {
                   transition: transform $slow 2s, opacity $slow 2s;
@@ -2784,10 +2809,14 @@ body {
             }
             .style-imgs-back {
               height: rem(720);
-              width: rem(1440);
+              width: 100vw;
+              // width: rem(1440);
               bottom: rem(-957);
               left: 50%;
               transform: translate3d(-50%, 0, 0);
+              div {
+                height: fit-content;
+              }
               picture, img {
                 position: relative;
                 height: 100%;
@@ -2976,7 +3005,7 @@ body {
             top: rem(-388);
             left: rem(400);
             width: rem(643);
-            z-index: 1;
+            z-index: 2;
             picture {
               position: relative;
               z-index: 1;
@@ -2990,17 +3019,24 @@ body {
             }
           }
           p {
-            right: rem(500);
+            padding-right: rem(100);
+            left: rem(400);
+            width: rem(643);
             bottom: rem(80);
             @include fontsize(12);
             line-height: (24 /12);
             color: $accent_1;
-            z-index: 1;
+            text-align: right;
+            z-index: 2;
+            span {
+              text-align: left;
+            }
           }
           .back {
             height: rem(778);
+            overflow: hidden;
             picture, img {
-              height: 100%;
+              // height: 100%;
               width: 100%;
               object-fit: cover;
             }
