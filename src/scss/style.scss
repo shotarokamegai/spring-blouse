@@ -403,6 +403,9 @@ body {
         width: 550vw !important;
         .swiper-wrapper {
           .swiper-slide {
+            &:nth-child(1) {
+              left: rem(1);
+            }
             picture {
               top: -10vw;
               height: 100%;
@@ -1404,6 +1407,9 @@ body {
         .swiper-wrapper {
           transition-timing-function: linear;
           .swiper-slide {
+              &:nth-child(1) {
+                left: rem(1);
+              }
               picture {
                 display: block;
                 top: vwPc(-25);

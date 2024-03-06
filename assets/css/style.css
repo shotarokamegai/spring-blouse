@@ -1006,6 +1006,9 @@ body .hidden {
   main .swiper-container.sky {
     width: 550vw !important;
   }
+  main .swiper-container.sky .swiper-wrapper .swiper-slide:nth-child(1) {
+    left: 0.1rem;
+  }
   main .swiper-container.sky .swiper-wrapper .swiper-slide picture {
     top: -10vw;
     height: 100%;
@@ -2046,6 +2049,9 @@ body .hidden {
   }
   main .swiper-container.sky .swiper-wrapper {
     transition-timing-function: linear;
+  }
+  main .swiper-container.sky .swiper-wrapper .swiper-slide:nth-child(1) {
+    left: 0.1rem;
   }
   main .swiper-container.sky .swiper-wrapper .swiper-slide picture {
     display: block;
