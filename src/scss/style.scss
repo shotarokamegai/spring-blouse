@@ -322,12 +322,29 @@ body {
       height: vw(18); 
       width: vw(18); 
       border-radius: 100%;
+      overflow: hidden;
+      &.whiteblack {
+        display: flex;
+        border: rem(1) solid #dddddd;
+        &::before, &#after {
+          content: '';
+          width: 50%;
+          height: 100%;
+          display: block;
+        }
+        &::before {
+          background-color: $black;
+        }
+        &::after {
+          background-color: $black;
+        }
+      }
     }
     .btn {
       position: relative;
       display: inline-block;
       height: vw(24);
-      line-height: vw(22);
+      line-height: vw(24);
       width: vw(65);
       text-align: center;
       border: vw(1) solid $accent_1;
@@ -1310,10 +1327,12 @@ body {
     }
     .credit {
       .price {
-        @include fontvwPc(12);
+        @include fontsize(12);
+        // @include fontvwPc(12);
       }
       .btn {
-        margin-left: vwPc(16);
+        margin-left: rem(16);
+        // margin-left: vwPc(16);
       }
     }
     .color-wrapper {
@@ -1328,12 +1347,29 @@ body {
       height: vwPc(48); 
       width: vwPc(48); 
       border-radius: 100%;
+      overflow: hidden;
+      &.whiteblack {
+        display: flex;
+        border: rem(1) solid #dddddd;
+        &::before, &#after {
+          content: '';
+          width: 50%;
+          height: 100%;
+          display: block;
+        }
+        &::before {
+          background-color: $black;
+        }
+        &::after {
+          background-color: $black;
+        }
+      }
     }
     .btn {
       position: relative;
       display: inline-block;
       height: vwPc(24);
-      line-height: vwPc(22);
+      line-height: vwPc(24);
       width: vwPc(65);
       text-align: center;
       border: vwPc(1) solid $accent_1;
@@ -1429,7 +1465,8 @@ body {
     .section {
       position: relative;
       &-text {
-        @include fontvwPc(16); 
+        @include fontsize(16); 
+        // @include fontvwPc(16); 
         line-height: (32 / 16);
         text-align: center;
       }
@@ -1646,18 +1683,18 @@ body {
               }
             }
             &:nth-child(1) {
-              @include fontvwPc(24);
+              @include fontsize(24);
               font-weight: 300;  
-              letter-spacing: 0.15vw;
+              letter-spacing: rem(3);
             }
             &:nth-child(2) {
-              @include fontvwPc(64);
-              letter-spacing: .45vw;
+              @include fontsize(64);
+              letter-spacing: rem(9);
             }
             &:nth-child(3) {
-              margin-top: vwPc(-10);
-              margin-left: vwPc(68);
-              @include fontvwPc(80);
+              margin-top: rem(-10);
+              margin-left: rem(68);
+              @include fontsize(80);
               font-weight: 400;  
             }
           }
@@ -1719,27 +1756,27 @@ body {
             }
           }
           &-name {
-            margin-bottom: vwPc(24);
-            @include fontvwPc(42);
+            margin-bottom: rem(24);
+            @include fontsize(42);
             font-weight: 300;
             color: $accent_1;
             .index {
               position: relative;
-              top: 0.2vw;
-              margin-right: vwPc(8);
-              @include fontvwPc(16);
+              top: rem(.4);
+              margin-right: rem(8);
+              @include fontsize(16);
               font-weight: 700; 
-              letter-spacing: .1vw;
+              letter-spacing: rem(.2);
             }
             .ffcomp {
-              letter-spacing: .45vw;
+              letter-spacing: rem(9);
             }
           }
           &-price {
-            @include fontvwPc(16);
+            @include fontsize(16);
           }
           .btn, .color-wrapper {
-            margin-top: vwPc(32); 
+            margin-top: rem(32); 
           }
         }
         &#style01 {
@@ -2325,12 +2362,29 @@ body {
         height: rem(48); 
         width: rem(48); 
         border-radius: 100%;
+      overflow: hidden;
+      &.whiteblack {
+        display: flex;
+        border: rem(1) solid #dddddd;
+        &::before, &#after {
+          content: '';
+          width: 50%;
+          height: 100%;
+          display: block;
+        }
+        &::before {
+          background-color: $black;
+        }
+        &::after {
+          background-color: $black;
+        }
+      }
       }
       .btn {
         position: relative;
         display: inline-block;
         height: rem(24);
-        line-height: rem(22);
+        line-height: rem(24);
         width: rem(65);
         text-align: center;
         border: rem(1) solid $accent_1;
@@ -2641,11 +2695,11 @@ body {
               &:nth-child(1) {
                 @include fontsize(24);
                 font-weight: 300;  
-                letter-spacing: 0.15vw;
+                letter-spacing: rem(3);
               }
               &:nth-child(2) {
                 @include fontsize(64);
-                letter-spacing: .45vw;
+                letter-spacing: rem(9);
               }
               &:nth-child(3) {
                 margin-top: rem(-10);
@@ -2718,14 +2772,14 @@ body {
               color: $accent_1;
               .index {
                 position: relative;
-                top: 0.2vw;
+                top: rem(.4);
                 margin-right: rem(8);
                 @include fontsize(16);
                 font-weight: 700; 
-                letter-spacing: .1vw;
+                letter-spacing: rem(.2);
               }
               .ffcomp {
-                letter-spacing: .45vw;
+                letter-spacing: rem(9);
               }
             }
             &-price {

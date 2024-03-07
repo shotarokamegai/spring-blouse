@@ -25,21 +25,25 @@
         for (var i = 0; i < color.length; i++) {
           var thisColor = color[i];
           var border = 'transparent';
+          if (thisColor === 'whiteblack') {
+              %>
+          <div class="color whiteblack"></div>
+          <%
+          } else {
+
           if (thisColor === '#ffffff') {
             border = '#DDDDDD';
           }
           if (thisColor.match(/,/)) {
             let colors = thisColor.split(',');
-            for (var j = 0; j < colors.length; j++) {
               %>
-        <div class="color" style="background:repeating-linear-gradient(90deg, <%- colors[0] %> 0, <%- colors[0] %> 2px, <%- colors[1] %> 2px, <%- colors[1] %> 4px);"></div>
-              
+                <div class="color" style="background:repeating-linear-gradient(90deg, <%- colors[0] %> 0, <%- colors[0] %> 3px, <%- colors[1] %> 3px, <%- colors[1] %> 6px);"></div>
               <%
-            }
           } else {
-      %>
-        <div class="color" style="border: 1px solid <%- border %>; background-color: <%- thisColor %>"></div>
-      <%
+          %>
+            <div class="color" style="border: 1px solid <%- border %>; background-color: <%- thisColor %>"></div>
+          <%
+          }
           }
         }
       %>
