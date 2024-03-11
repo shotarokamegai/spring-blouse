@@ -208,6 +208,13 @@ body {
     .style-img {
       position: relative;
       width: vw(170);
+      // &.no-back, &.no-back-sp {
+      //     .style-img__inner {
+      //     &::before {
+      //       display: none;
+      //     }
+      //   }
+      // }
       &__inner {
         position: relative;
         overflow: hidden;
@@ -1225,6 +1232,13 @@ body {
     .style-img {
       position: relative;
       width: vwPc(303);
+      // &.no-back {
+      //     .style-img__inner {
+      //     &::before {
+      //       display: none;
+      //     }
+      //   }
+      // }
       &__inner {
         position: relative;
         overflow: hidden;
@@ -2244,6 +2258,13 @@ body {
       .style-img {
         position: relative;
         width: rem(303);
+        // &.no-back {
+        //   .style-img__inner {
+        //     &::before {
+        //       display: none;
+        //     }
+        //   }
+        // }
         &__inner {
           position: relative;
           overflow: hidden;
