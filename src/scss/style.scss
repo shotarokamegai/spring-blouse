@@ -3127,7 +3127,15 @@ body {
             }
           }
         }
-        &#credit {
+        &#credit-invisible {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 100%;
+          transform: translate3d(-50%, 0, 0);
+          z-index: -1;
+        }
+        &#credit, &#credit-invisible {
           .section__inner {
             width: 100%;
           }
@@ -3149,8 +3157,9 @@ body {
             }
           }
           p {
-            padding-right: rem(100);
-            left: rem(400);
+            padding-right: 0;
+            right: 0;
+            // left: rem(400);
             width: rem(643);
             bottom: rem(80);
             @include fontsize(12);
