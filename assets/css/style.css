@@ -641,6 +641,10 @@ body .hidden {
   position: absolute;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 @media screen and (max-width: 749px) {
   .loaded main .section#top .wrapper .box:nth-child(1) .swiper-container, .loaded main .section#top .wrapper .box:nth-child(1) .logo {
     opacity: 1;
@@ -1473,9 +1477,12 @@ body .hidden {
   main .section.style#style03 {
     padding: 0 0 16.2849872774vw;
   }
+  main .section.style#style03 .section__inner {
+    text-align: right;
+  }
   main .section.style#style03 .section-title {
     top: 0;
-    right: 25.4452926209vw;
+    margin: 0 25.4452926209vw 7.6335877863vw auto;
   }
   main .section.style#style03 .product {
     margin: 12.213740458vw auto 0;
@@ -1658,21 +1665,29 @@ body .hidden {
     margin-top: 10.1781170483vw;
     margin-left: 5.5979643766vw;
   }
-  main .section#credit .section__inner {
+  main .section#credit-invisible {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    transform: translate3d(-50%, 0, 0);
+    z-index: -1;
+  }
+  main .section#credit .section__inner, main .section#credit-invisible .section__inner {
     width: 100%;
   }
-  main .section#credit .img {
+  main .section#credit .img, main .section#credit-invisible .img {
     top: -30.534351145vw;
     left: 50%;
     width: 89.058524173vw;
     transform: translate3d(-50%, 0, 0);
     z-index: 2;
   }
-  main .section#credit .img picture {
+  main .section#credit .img picture, main .section#credit-invisible .img picture {
     position: relative;
     z-index: 1;
   }
-  main .section#credit .img::before {
+  main .section#credit .img::before, main .section#credit-invisible .img::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -1682,7 +1697,7 @@ body .hidden {
     width: 100%;
     background-color: #ffffff;
   }
-  main .section#credit p {
+  main .section#credit p, main .section#credit-invisible p {
     left: 50%;
     bottom: 20.3562340967vw;
     white-space: nowrap;
@@ -1693,11 +1708,11 @@ body .hidden {
     color: #FF5B00;
     z-index: 2;
   }
-  main .section#credit .back {
+  main .section#credit .back, main .section#credit-invisible .back {
     height: 146.31043257vw;
     overflow: hidden;
   }
-  main .section#credit .back picture, main .section#credit .back img {
+  main .section#credit .back picture, main .section#credit .back img, main .section#credit-invisible .back picture, main .section#credit-invisible .back img {
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
@@ -2716,20 +2731,28 @@ body .hidden {
     top: 15.3472222222vw;
     right: 17.5694444444vw;
   }
-  main .section#credit .section__inner {
+  main .section#credit-invisible {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    transform: translate3d(-50%, 0, 0);
+    z-index: -1;
+  }
+  main .section#credit .section__inner, main .section#credit-invisible .section__inner {
     width: 100%;
   }
-  main .section#credit .img {
+  main .section#credit .img, main .section#credit-invisible .img {
     top: -26.9444444444vw;
     left: 27.7777777778vw;
     width: 44.6527777778vw;
     z-index: 2;
   }
-  main .section#credit .img picture {
+  main .section#credit .img picture, main .section#credit-invisible .img picture {
     position: relative;
     z-index: 1;
   }
-  main .section#credit .img::before {
+  main .section#credit .img::before, main .section#credit-invisible .img::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -2739,7 +2762,7 @@ body .hidden {
     width: 100%;
     background-color: #ffffff;
   }
-  main .section#credit p {
+  main .section#credit p, main .section#credit-invisible p {
     padding-right: 6.9444444444vw;
     left: 27.7777777778vw;
     width: 44.6527777778vw;
@@ -2751,15 +2774,15 @@ body .hidden {
     text-align: right;
     z-index: 2;
   }
-  main .section#credit p span {
+  main .section#credit p span, main .section#credit-invisible p span {
     display: inline-block;
     text-align: left;
   }
-  main .section#credit .back {
+  main .section#credit .back, main .section#credit-invisible .back {
     height: 54.0277777778vw;
     overflow: hidden;
   }
-  main .section#credit .back picture, main .section#credit .back img {
+  main .section#credit .back picture, main .section#credit .back img, main .section#credit-invisible .back picture, main .section#credit-invisible .back img {
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;

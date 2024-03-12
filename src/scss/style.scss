@@ -72,6 +72,9 @@ body {
 .absolute {
   position: absolute;
 }
+.hidden {
+  visibility: hidden;
+}
 
 @media screen and (max-width: 749px) {
   .loaded {
@@ -862,9 +865,13 @@ body {
         }
         &#style03 {
           padding: 0 0 vw(64);
+          .section__inner {
+            text-align: right;
+          }
           .section-title {
             top: 0;
-            right: vw(100);
+            margin: 0 vw(100) vw(30) auto;
+            // right: vw(100);
           }
           .product {
             margin: vw(48) auto 0;
@@ -1056,7 +1063,15 @@ body {
           }
         }
       }
-      &#credit {
+      &#credit-invisible {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 100%;
+        transform: translate3d(-50%, 0, 0);
+        z-index: -1;
+      }
+      &#credit, &#credit-invisible {
         .section__inner {
           width: 100%;
         }
@@ -2076,7 +2091,15 @@ body {
           }
         }
       }
-      &#credit {
+      &#credit-invisible {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 100%;
+        transform: translate3d(-50%, 0, 0);
+        z-index: -1;
+      }
+      &#credit, &#credit-invisible {
         .section__inner {
           width: 100%;
         }
